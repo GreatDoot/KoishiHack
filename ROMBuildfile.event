@@ -18,6 +18,14 @@
     #include "EngineHacks/_MasterHackInstaller.event"
     MESSAGE Used hax space ends at currentOffset
 
+    //Graphics
+    #include "Graphics/_GraphicsInstaller.event"
+    MESSAGE Used graphics space ends at currentOffset
+
+    //Music
+    #include "Music/_MusicInstaller.event"
+    MESSAGE Used music space ends at currentOffset
+
 	#ifdef USE_TEST_MAP
     //Events
     #include "Events/Release_map.event"
@@ -30,6 +38,8 @@
 	ASSERT (FreeSpaceEnd - currentOffset) // So that you don't overwrite vanilla tables if using default freespace
 	
     MESSAGE Used free space ends at currentOffset
+
+    MESSAGE "actually i think that satori should be the main character"
 #else
     ERROR "You are not assembling FE8 events!"
 #endif

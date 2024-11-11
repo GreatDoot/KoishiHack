@@ -1,0 +1,21 @@
+//#include "Mugs/Mugs Installer.event"
+
+//#include "MapSprites/Installer.event"
+
+//#include "ItemIcons/Installer.event"
+
+//#include "BattleScreen/Installer.event"
+
+//#include "Animation/MasterAnimationInstaller.event"
+
+//#include "Palettes/Palette Installer.event" //must be included after anims are
+
+//#include "Tilesets/TilesetInstaller.event"
+
+//Faster Status Screen - Contro
+PUSH
+	ORG $A00A48
+	BYTE 0x13 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+	ORG $A00A60
+	BYTE 0x13 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+POP

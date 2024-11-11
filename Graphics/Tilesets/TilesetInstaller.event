@@ -1,0 +1,15 @@
+ALIGN 4
+TownTilesetObjects:
+#incbin "dmp/Town-graphics.dmp"
+
+ALIGN 4
+TownTilesetPalette:
+#incbin "dmp/Town-palette.dmp"
+
+ALIGN 4
+TownTilesetConfig:
+#incbin "dmp/Town-mapchip.dmp"
+
+EventPointerTable(0xE7,TownTilesetObjects)
+EventPointerTable(0xE8,TownTilesetPalette)
+EventPointerTable(0xE9,TownTilesetConfig)

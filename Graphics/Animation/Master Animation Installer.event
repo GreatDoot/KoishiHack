@@ -1,0 +1,53 @@
+#ifndef ClassAnimTable
+  #ifdef _FE8_
+    #define ClassAnimTable (0xc00008-0x20)
+  #endif
+  #ifdef _FE7_
+    #define ClassAnimTable (0xe00008-0x20)
+  #endif
+#endif
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + (index * 0x20)"
+#define animSword 0
+#define animLance 1
+#define animAxe 2
+#define animBow 3
+#define animStaff 4
+#define animAnima 5
+#define animLight 6
+#define animDark 7
+#define animNone 9
+#define weaponTypeAnim(weaponType, ID) "BYTE weaponType 1 ID 0;"
+#define weaponAnim(weaponID, ID) "BYTE weaponID 0 ID 0;"
+#define weaponAnimEnd "WORD 0"
+#define SetAnimationPointers(class, pointer) "PUSH; ORG 0x807110 + (class*84) + 52; POIN pointer; POP"
+
+#define SwordAnim(Anim) "BYTE 0 1; SHORT Anim"
+#define LanceAnim(Anim) "BYTE 1 1; SHORT Anim"
+#define AxeAnim(Anim) "BYTE 2 1; SHORT Anim"
+#define HandaxeAnim(Anim) "BYTE Handaxe 0; SHORT Anim; BYTE Tomahawk 0; SHORT Anim"
+#define BowAnim(Anim) "BYTE 3 1; SHORT Anim"
+#define StaffAnim(Anim) "BYTE 4 1; SHORT Anim"
+#define AnimaAnim(Anim) "BYTE 5 1; SHORT Anim"
+#define LightAnim(Anim) "BYTE 6 1; SHORT Anim"
+#define DarkAnim(Anim) "BYTE 7 1; SHORT Anim"
+#define MagicAnim(Anim) "BYTE 5 1; SHORT Anim; BYTE 6 1; SHORT Anim; BYTE 7 1; SHORT Anim"
+#define UnarmedAnim(Anim) "BYTE 9 1; SHORT Anim"
+#define EndAnim "WORD 0"
+
+
+//////////////Installed animations go here:
+
+{
+#include "SerolLord/Bow/Bow Installer.event"
+#include "SerolLord/Unarmed/Unarmed Installer.event"
+}
+
+ALIGN 4
+SerolLordT1Anims:
+BowAnim(0x1)
+UnarmedAnim(0x2)
+EndAnim
+
+  
+  

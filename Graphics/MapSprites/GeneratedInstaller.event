@@ -1,0 +1,287 @@
+//Generated - do not edit
+//Copy paste the /* */ section into your definitions if desired.
+//Please copy the SetSMS and SetMMS section to change SMS size and MMS AP. 
+ 
+ 
+ 
+/* 
+//First free SMS is 107
+#define sAssassin 107 
+#define sCavalier 108 
+#define sDragoonRenameThis 109 
+#define sDreadFighterRenameThis 110 
+#define sFreeblade 111 
+#define sGloryKnight 112 
+#define sHarrier 113 
+#define sLancerF 114 
+#define sLancerM 115 
+#define sNomad 116 
+#define sPrince 117 
+#define sPrincess 118 
+#define sSellswordF 119 
+#define sSentinelF 120 
+#define sSentinelM 121 
+#define sSpy 122 
+#define sStalwart_Axe 123 
+#define sStalwart_Sword 124 
+#define sSweeperF 125 
+#define sSweeperM 126 
+#define sTrooper 127 
+ 
+ 
+//First free MMS is 127 and will show up if you've expanded classes.
+#define mAssassin 127 
+#define mCavalier 128 
+#define mDragoonRenameThis 129 
+#define mDreadFighterRenameThis 130 
+#define mFreeblade 131 
+#define mGloryKnight 132 
+#define mHarrier 133 
+#define mLancerF 134 
+#define mLancerM 135 
+#define mNomad 136 
+#define mPrince 137 
+#define mPrincess 138 
+#define mSellswordF 139 
+#define mSentinelF 140 
+#define mSentinelM 141 
+#define mSpy 142 
+#define mStalwart_Axe 143 
+#define mStalwart_Sword 144 
+#define mSweeperF 145 
+#define mSweeperM 146 
+#define mTrooper 147 
+ 
+*/ 
+ 
+ 
+ 
+/* 
+//Copy from here 
+PUSH 
+ 
+SetSMS(sAssassin, 1, sAssassin_Data) 
+SetSMS(sCavalier, 1, sCavalier_Data) 
+SetSMS(sDragoonRenameThis, 1, sDragoonRenameThis_Data) 
+SetSMS(sDreadFighterRenameThis, 1, sDreadFighterRenameThis_Data) 
+SetSMS(sFreeblade, 1, sFreeblade_Data) 
+SetSMS(sGloryKnight, 1, sGloryKnight_Data) 
+SetSMS(sHarrier, 1, sHarrier_Data) 
+SetSMS(sLancerF, 1, sLancerF_Data) 
+SetSMS(sLancerM, 1, sLancerM_Data) 
+SetSMS(sNomad, 1, sNomad_Data) 
+SetSMS(sPrince, 1, sPrince_Data) 
+SetSMS(sPrincess, 1, sPrincess_Data) 
+SetSMS(sSellswordF, 1, sSellswordF_Data) 
+SetSMS(sSentinelF, 1, sSentinelF_Data) 
+SetSMS(sSentinelM, 1, sSentinelM_Data) 
+SetSMS(sSpy, 1, sSpy_Data) 
+SetSMS(sStalwart_Axe, 1, sStalwart_Axe_Data) 
+SetSMS(sStalwart_Sword, 1, sStalwart_Sword_Data) 
+SetSMS(sSweeperF, 1, sSweeperF_Data) 
+SetSMS(sSweeperM, 1, sSweeperM_Data) 
+SetSMS(sTrooper, 1, sTrooper_Data) 
+ 
+ 
+SetMMS(mAssassin, mAssassin_Data, DemonKingAP) 
+SetMMS(mCavalier, mCavalier_Data, DemonKingAP) 
+SetMMS(mDragoonRenameThis, mDragoonRenameThis_Data, DemonKingAP) 
+SetMMS(mDreadFighterRenameThis, mDreadFighterRenameThis_Data, DemonKingAP) 
+SetMMS(mFreeblade, mFreeblade_Data, DemonKingAP) 
+SetMMS(mGloryKnight, mGloryKnight_Data, DemonKingAP) 
+SetMMS(mHarrier, mHarrier_Data, DemonKingAP) 
+SetMMS(mLancerF, mLancerF_Data, DemonKingAP) 
+SetMMS(mLancerM, mLancerM_Data, DemonKingAP) 
+SetMMS(mNomad, mNomad_Data, DemonKingAP) 
+SetMMS(mPrince, mPrince_Data, DemonKingAP) 
+SetMMS(mPrincess, mPrincess_Data, DemonKingAP) 
+SetMMS(mSellswordF, mSellswordF_Data, DemonKingAP) 
+SetMMS(mSentinelF, mSentinelF_Data, DemonKingAP) 
+SetMMS(mSentinelM, mSentinelM_Data, DemonKingAP) 
+SetMMS(mSpy, mSpy_Data, DemonKingAP) 
+SetMMS(mStalwart_Axe, mStalwart_Axe_Data, DemonKingAP) 
+SetMMS(mStalwart_Sword, mStalwart_Sword_Data, DemonKingAP) 
+SetMMS(mSweeperF, mSweeperF_Data, DemonKingAP) 
+SetMMS(mSweeperM, mSweeperM_Data, DemonKingAP) 
+SetMMS(mTrooper, mTrooper_Data, DemonKingAP) 
+ 
+POP 
+//Copy until here 
+*/ 
+ 
+ 
+//SMS Image Data 
+ 
+ALIGN 4 
+sAssassin_Data: 
+#incbin "dmp/sAssassin.dmp" 
+ 
+ALIGN 4 
+sCavalier_Data: 
+#incbin "dmp/sCavalier.dmp" 
+ 
+ALIGN 4 
+sDragoonRenameThis_Data: 
+#incbin "dmp/sDragoonRenameThis.dmp" 
+ 
+ALIGN 4 
+sDreadFighterRenameThis_Data: 
+#incbin "dmp/sDreadFighterRenameThis.dmp" 
+ 
+ALIGN 4 
+sFreeblade_Data: 
+#incbin "dmp/sFreeblade.dmp" 
+ 
+ALIGN 4 
+sGloryKnight_Data: 
+#incbin "dmp/sGloryKnight.dmp" 
+ 
+ALIGN 4 
+sHarrier_Data: 
+#incbin "dmp/sHarrier.dmp" 
+ 
+ALIGN 4 
+sLancerF_Data: 
+#incbin "dmp/sLancerF.dmp" 
+ 
+ALIGN 4 
+sLancerM_Data: 
+#incbin "dmp/sLancerM.dmp" 
+ 
+ALIGN 4 
+sNomad_Data: 
+#incbin "dmp/sNomad.dmp" 
+ 
+ALIGN 4 
+sPrince_Data: 
+#incbin "dmp/sPrince.dmp" 
+ 
+ALIGN 4 
+sPrincess_Data: 
+#incbin "dmp/sPrincess.dmp" 
+ 
+ALIGN 4 
+sSellswordF_Data: 
+#incbin "dmp/sSellswordF.dmp" 
+ 
+ALIGN 4 
+sSentinelF_Data: 
+#incbin "dmp/sSentinelF.dmp" 
+ 
+ALIGN 4 
+sSentinelM_Data: 
+#incbin "dmp/sSentinelM.dmp" 
+ 
+ALIGN 4 
+sSpy_Data: 
+#incbin "dmp/sSpy.dmp" 
+ 
+ALIGN 4 
+sStalwart_Axe_Data: 
+#incbin "dmp/sStalwart_Axe.dmp" 
+ 
+ALIGN 4 
+sStalwart_Sword_Data: 
+#incbin "dmp/sStalwart_Sword.dmp" 
+ 
+ALIGN 4 
+sSweeperF_Data: 
+#incbin "dmp/sSweeperF.dmp" 
+ 
+ALIGN 4 
+sSweeperM_Data: 
+#incbin "dmp/sSweeperM.dmp" 
+ 
+ALIGN 4 
+sTrooper_Data: 
+#incbin "dmp/sTrooper.dmp" 
+ 
+ 
+ 
+ 
+//MMS Image Data 
+ 
+ALIGN 4 
+mAssassin_Data: 
+#incbin "dmp/mAssassin.dmp" 
+ 
+ALIGN 4 
+mCavalier_Data: 
+#incbin "dmp/mCavalier.dmp" 
+ 
+ALIGN 4 
+mDragoonRenameThis_Data: 
+#incbin "dmp/mDragoonRenameThis.dmp" 
+ 
+ALIGN 4 
+mDreadFighterRenameThis_Data: 
+#incbin "dmp/mDreadFighterRenameThis.dmp" 
+ 
+ALIGN 4 
+mFreeblade_Data: 
+#incbin "dmp/mFreeblade.dmp" 
+ 
+ALIGN 4 
+mGloryKnight_Data: 
+#incbin "dmp/mGloryKnight.dmp" 
+ 
+ALIGN 4 
+mHarrier_Data: 
+#incbin "dmp/mHarrier.dmp" 
+ 
+ALIGN 4 
+mLancerF_Data: 
+#incbin "dmp/mLancerF.dmp" 
+ 
+ALIGN 4 
+mLancerM_Data: 
+#incbin "dmp/mLancerM.dmp" 
+ 
+ALIGN 4 
+mNomad_Data: 
+#incbin "dmp/mNomad.dmp" 
+ 
+ALIGN 4 
+mPrince_Data: 
+#incbin "dmp/mPrince.dmp" 
+ 
+ALIGN 4 
+mPrincess_Data: 
+#incbin "dmp/mPrincess.dmp" 
+ 
+ALIGN 4 
+mSellswordF_Data: 
+#incbin "dmp/mSellswordF.dmp" 
+ 
+ALIGN 4 
+mSentinelF_Data: 
+#incbin "dmp/mSentinelF.dmp" 
+ 
+ALIGN 4 
+mSentinelM_Data: 
+#incbin "dmp/mSentinelM.dmp" 
+ 
+ALIGN 4 
+mSpy_Data: 
+#incbin "dmp/mSpy.dmp" 
+ 
+ALIGN 4 
+mStalwart_Axe_Data: 
+#incbin "dmp/mStalwart_Axe.dmp" 
+ 
+ALIGN 4 
+mStalwart_Sword_Data: 
+#incbin "dmp/mStalwart_Sword.dmp" 
+ 
+ALIGN 4 
+mSweeperF_Data: 
+#incbin "dmp/mSweeperF.dmp" 
+ 
+ALIGN 4 
+mSweeperM_Data: 
+#incbin "dmp/mSweeperM.dmp" 
+ 
+ALIGN 4 
+mTrooper_Data: 
+#incbin "dmp/mTrooper.dmp" 
+ 

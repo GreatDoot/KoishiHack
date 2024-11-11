@@ -1,0 +1,89 @@
+//referencing JP_Hack for pointer locations
+
+// Main Tiles - pointer at 51F68
+// Left Name Tiles - pointer at 51FC8
+// Right Name Tiles - pointer at 52088
+// Left Weapon Tiles - pointer at 52028
+// Right Weapon Tiles - pointer at 52164
+
+// Palette - pointer at 52178
+
+// TSA1 - pointer at 51CBC // length 180
+// TSA2 - pointer at 51CC0 // length 540
+// TSA3 - pointer at 51378 // length 210
+// TSA4 - pointer at 51380 // length 224
+// TSA5 - pointer at 52170 // length 80
+// TSA Single - pointer at 5141C // length 224
+
+ALIGN 4
+BattleScreen_MainTiles:
+#incbin "dmp/main.dmp"
+
+ALIGN 4
+BattleScreen_LeftName:
+#incbin "dmp/left_name.dmp"
+
+ALIGN 4
+BattleScreen_RightName:
+#incbin "dmp/right_name.dmp"
+
+ALIGN 4
+BattleScreen_LeftWeapon:
+#incbin "dmp/left_weapon.dmp"
+
+ALIGN 4
+BattleScreen_RightWeapon:
+#incbin "dmp/right_weapon.dmp"
+
+ALIGN 4
+BattleScreen_TSA1:
+#incbin "dmp/TSA1.dmp"
+
+ALIGN 4
+BattleScreen_TSA2:
+#incbin "dmp/TSA2.dmp"
+
+ALIGN 4
+BattleScreen_TSA3:
+#incbin "dmp/TSA3.dmp"
+
+ALIGN 4
+BattleScreen_TSA4:
+#incbin "dmp/TSA4.dmp"
+
+ALIGN 4
+BattleScreen_TSA5:
+#incbin "dmp/TSA5.dmp"
+
+ALIGN 4
+BattleScreen_TSA_Single:
+#incbin "dmp/TSA_Single.dmp"
+
+PUSH
+
+ORG $51F68
+POIN BattleScreen_MainTiles
+ORG $51FC8
+POIN BattleScreen_LeftName
+ORG $52088
+POIN BattleScreen_RightName
+ORG $52028
+POIN BattleScreen_LeftWeapon
+ORG $52164
+POIN BattleScreen_RightWeapon
+ORG $802558
+#incbin "dmp/BattleScreenPalette.dmp"
+ORG $51CBC
+POIN BattleScreen_TSA1
+ORG $51CC0
+POIN BattleScreen_TSA2
+ORG $51378
+POIN BattleScreen_TSA3
+ORG $51380
+POIN BattleScreen_TSA4
+ORG $52170
+POIN BattleScreen_TSA5
+ORG $5141C
+POIN BattleScreen_TSA_Single
+
+POP

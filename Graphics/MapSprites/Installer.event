@@ -1,0 +1,53 @@
+#include "Internals.event"
+#include "GeneratedInstaller.event"
+ 
+//Peer note - I made it so SetSMS takes SMS table ID directly and SetMMS takes class definition because that's the most convenient
+
+PUSH
+
+SetSMS(0x12, 0, sAssassin_Data) 
+SetSMS(0x04, 1, sCavalier_Data) 
+//SetSMS(sDragoonRenameThis, 1, sDragoonRenameThis_Data) 
+//SetSMS(sDreadFighterRenameThis, 1, sDreadFighterRenameThis_Data) 
+//SetSMS(sFreeblade, 1, sFreeblade_Data) 
+//SetSMS(sGloryKnight, 1, sGloryKnight_Data) 
+//SetSMS(sHarrier, 1, sHarrier_Data) 
+//SetSMS(sLancerF, 1, sLancerF_Data) 
+//SetSMS(sLancerM, 1, sLancerM_Data) 
+//SetSMS(sNomad, 1, sNomad_Data) 
+SetSMS(0x00, 1, sPrince_Data) 
+SetSMS(0x01, 0, sPrincess_Data) 
+SetSMS(0x0B, 0, sSellswordF_Data) 
+//SetSMS(sSentinelF, 1, sSentinelF_Data) 
+//SetSMS(sSentinelM, 1, sSentinelM_Data) 
+//SetSMS(sSpy, 1, sSpy_Data) 
+//SetSMS(sStalwart_Axe, 1, sStalwart_Axe_Data) 
+//SetSMS(sStalwart_Sword, 1, sStalwart_Sword_Data) 
+//SetSMS(sSweeperF, 1, sSweeperF_Data) 
+SetSMS(0x3F, 1, sSweeperM_Data) 
+SetSMS(0x18, 1, sTrooper_Data) 
+ 
+ 
+SetMMS(Assassin, mAssassin_Data, NormalAP) 
+SetMMS(Cavalier, mCavalier_Data, NormalAP) 
+//SetMMS(mDragoonRenameThis, mDragoonRenameThis_Data, DemonKingAP) 
+//SetMMS(mDreadFighterRenameThis, mDreadFighterRenameThis_Data, DemonKingAP) 
+//SetMMS(mFreeblade, mFreeblade_Data, DemonKingAP) 
+//SetMMS(mGloryKnight, mGloryKnight_Data, DemonKingAP) 
+//SetMMS(mHarrier, mHarrier_Data, DemonKingAP) 
+//SetMMS(mLancerF, mLancerF_Data, DemonKingAP) 
+//SetMMS(mLancerM, mLancerM_Data, DemonKingAP) 
+//SetMMS(mNomad, mNomad_Data, DemonKingAP) 
+SetMMS(Prince, mPrince_Data, NormalAP) 
+SetMMS(Princess, mPrincess_Data, NormalAP) 
+SetMMS(Sellsword_F, mSellswordF_Data, NormalAP) 
+//SetMMS(mSentinelF, mSentinelF_Data, NormalAP) 
+//SetMMS(mSentinelM, mSentinelM_Data, NormalAP) 
+//SetMMS(mSpy, mSpy_Data, DemonKingAP) 
+//SetMMS(mStalwart_Axe, mStalwart_Axe_Data, DemonKingAP) 
+//SetMMS(mStalwart_Sword, mStalwart_Sword_Data, DemonKingAP) 
+//SetMMS(mSweeperF, mSweeperF_Data, DemonKingAP) 
+SetMMS(Sweeper, mSweeperM_Data, NormalAP) 
+SetMMS(Trooper, mTrooper_Data, RangerAP) 
+ 
+POP

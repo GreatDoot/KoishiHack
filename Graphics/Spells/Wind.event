@@ -1,0 +1,7 @@
+//Replace evil eye palettes
+PUSH
+	ORG $6D3454
+	#incbin "WindPalettes1.dmp"
+	ORG $6D8A94
+	#incbin "WindPalettes2.dmp"
+POP
