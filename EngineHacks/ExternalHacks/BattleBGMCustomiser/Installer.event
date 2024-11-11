@@ -1,0 +1,44 @@
+#include "TablesAndMacros.event"
+
+//Edit stuff here.
+
+//SacredWeaponMusicItemAndBGM(item, song)
+
+//IgnoreSacredWeaponMusicUnit(unit)
+
+//SetStaffBGM(item, song)
+SetStaffBGM(0x4B, 0x22)
+SetStaffBGM(0x4C, 0x22)
+SetStaffBGM(0x4D, 0x22)
+SetStaffBGM(0x4E, 0x22)
+SetStaffBGM(0x4F, 0x22)
+SetStaffBGM(0x50, 0x22)
+SetStaffBGM(0x51, 0x21)
+SetStaffBGM(0x52, 0x21)
+SetStaffBGM(0x53, 0x21)
+SetStaffBGM(0x57, 0x22)
+SetStaffBGM(0x59, 0x22)
+SetStaffBGM(0x8C, 0x22)
+
+//DemonKingMusicSwitch(entry, unit, song, flag)
+//There are only 6 entries (0-5) for each table in this, edit "TablesAndMacros.event" if you need more.
+//lets fucking go, no more flag 0x82 hardcoding
+
+ALIGN 4
+DancerBGM:
+SHORT 0x20
+
+ALIGN 4
+BardBGM:
+SHORT 0x20
+//This doesn't have to be the same as DancerBGM, this just plays when using the Play menu option, and FE8 has no default for this.
+
+ALIGN 4
+PromotionBGM:
+SHORT 0x23
+
+ALIGN 4
+ArenaBGM:
+SHORT 0x39
+
+#include "C_Code.lyn.event" //epic code i do not dislike whatsoever
