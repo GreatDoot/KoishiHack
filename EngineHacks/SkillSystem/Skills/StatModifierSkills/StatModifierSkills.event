@@ -1,0 +1,50 @@
+
+
+
+ALIGN 4
+prArmorMarchCheck: //check if the bit is set and if so give the unit some stats
+#include "ArmorMarch/armormarchcheck.lyn.event"
+ALIGN 4 
+ArmorMarchBoost: 
+WORD 2 
+
+#include "DefiantSkills/DefiantSkills.event"
+
+prResolve:
+#incbin "Resolve/Resolve.dmp"
+POIN SkillTester
+WORD ResolveID
+
+#include "PushSkills/PushSkills.event"
+
+#include "LullSkills/LullSkills.event"
+
+#include "Guts/Guts.lyn.event" 
+ALIGN 4 
+StrongConAmount_Link: 
+WORD 5 
+GutsAmount_Link:
+WORD 5 
+StrongConID_Link: 
+WORD StrongConstitutionID 
+GutsID_Link:
+WORD GutsID 
+
+#include "SpeedBoost/SpeedBoost.lyn.event" 
+ALIGN 4
+SpeedBoostID_Link:
+WORD SpeedBoostID
+
+PlusAura:
+#incbin "Plus/Plus.dmp" 
+POIN AuraSkillCheck
+POIN SkillTester
+WORD PlusID
+WORD MinusID
+
+MinusAura:
+#incbin "Minus/Minus.dmp" 
+POIN AuraSkillCheck
+POIN SkillTester
+WORD PlusID
+WORD MinusID

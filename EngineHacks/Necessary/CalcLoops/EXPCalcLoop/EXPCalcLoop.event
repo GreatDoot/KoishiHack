@@ -1,0 +1,20 @@
+
+	/* EXP calculation loop */
+
+PUSH
+	ORG $2b960
+		ALIGN 4
+		SHORT $4778 $46C0
+		WORD $E59FC000 $E12FFF1C
+		POIN EXPCalcLoop
+POP
+
+#include "EXPCalcLoop.lyn.event"
+EXPCalcFunctions:
+POIN Paragon Veteran Blossom VoidCurse
+#ifdef MODULAR_EXP
+	POIN ModularEXP
+#endif // MODULAR_EXP
+WORD 0 // Terminator
+
+PROTECT 0x2B960 0x2B970

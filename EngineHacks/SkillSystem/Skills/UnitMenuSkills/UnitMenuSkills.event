@@ -1,0 +1,100 @@
+
+#include "Capture/Capture.event"
+
+#include "StealPlus/StealPlus.event"
+
+#include "HeroesMovement/HeroesMovement.event"
+
+#include "SacrificeDrawBack/Installer.event" 
+
+ALIGN 4
+NewDanceUsability:
+#incbin "Dance/NewDanceUsability.dmp"
+POIN SkillTester
+WORD DanceID
+WORD ALSO_USE_VANILLA_DANCE_CHECK
+
+ALIGN 4
+NewSupplyUsability:
+#incbin "Supply/NewSupplyUsability.dmp"
+POIN SkillTester
+WORD SupplyID
+WORD ALSO_USE_VANILLA_SUPPLY_CHECK
+
+ALIGN 4
+NewSummonUsability:
+#incbin "Summon/NewSummonUsability.dmp"
+POIN SkillTester
+WORD SummonID
+WORD ALSO_USE_VANILLA_SUMMON_CHECK
+
+ALIGN 4
+AttackEffect:
+#incbin "Attack/AttackEffect.dmp"
+
+ALIGN 4
+LungeUsability:
+#incbin "Lunge/LungeUsability.dmp"
+POIN SkillTester
+WORD LungeID
+
+ALIGN 4
+LungeEffect:
+#incbin "Lunge/LungeEffect.dmp"
+
+ALIGN 4
+GambleUsability:
+#incbin "Gamble/GambleUsability.dmp"
+POIN SkillTester
+WORD GambleID
+
+ALIGN 4
+GambleEffect:
+#incbin "Gamble/GambleEffect.dmp"
+
+ALIGN 4
+MercyUsability:
+#incbin "Mercy/MercyUsability.dmp"
+POIN SkillTester
+WORD MercyID
+
+ALIGN 4
+MercyEffect:
+#incbin "Mercy/MercyEffect.dmp"
+
+ALIGN 4
+GoddessDanceUsability:
+#incbin "GoddessDance/GoddessDanceUsability.dmp"
+POIN SkillTester
+WORD GoddessDanceID
+POIN GetUnitsInRange
+
+ALIGN 4
+GoddessDanceEffect:
+#incbin "GoddessDance/GoddessDanceEffect.dmp"
+POIN GetUnitsInRange
+
+ALIGN 4
+DetonateUsability:
+#incbin "Detonate/DetonateUsability.dmp"
+POIN SkillTester
+WORD DetonateID
+
+ALIGN 4
+DetonateEffect:
+#incbin "Detonate/DetonateEffect.dmp"
+
+StrideUsability:
+#incbin "Stride/StrideUsability.dmp"
+POIN SkillTester
+WORD StrideID
+
+ALIGN 4
+StrideEffect:
+#incbin "Stride/StrideEffect.dmp"
+POIN GetUnitsInRange
+
+
+
+#include "CombatArts/CombatArts.event"
+

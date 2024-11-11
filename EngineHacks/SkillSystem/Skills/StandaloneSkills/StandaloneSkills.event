@@ -1,0 +1,144 @@
+PUSH
+
+//Bargain
+ORG 0xB5240
+jumpToHack(Bargain)
+
+//Boon
+ORG $188F6
+BYTE 0x00 0x00
+BYTE 0x00 0x48 0x87 0x46; POIN (Boon|0x1)
+
+//Discipline
+ORG $2C13C
+callHack_r3(Discipline)
+
+//Live to Serve
+ORG $2EBD4
+jumpToHack(LiveToServe)
+
+//LockTouch
+ORG $23E8C //ignore vanilla locktouch routine
+jumpToHack(LockTouch)
+
+//Lunge
+ORG $18744
+callHack_r3(Lunge)
+
+//Vantage
+ORG $2Af7C
+jumpToHack(Vantage)
+
+//Inspiring Tune
+ORG $32364
+jumpToHack(VigorDanceSkill) //set a bit in the debuff entries to danced units
+
+#ifndef VANILLA_TRIANGLE_ATTACK
+//Triangle Attack
+ORG $2B57C
+jumpToHack(TriangleAttackSkill1)
+ORG $2B16C
+callHack_r1(TriangleAttackSkill2)
+
+#endif
+
+//ParagonMisc
+ORG $2C6CC
+callHack_r0(ParagonMisc)
+
+//Synchronize
+ORG $2C214
+jumpToHack(Synchronize)
+
+ORG $2F840 
+jumpToHack(ShrewdPotential) 
+
+ORG $31B84
+jumpToHack(ConcealedWeapon)
+
+
+POP
+
+#include "Bargain/Bargain.event"
+
+ALIGN 4
+Boon:
+#incbin "Boon/Boon.dmp"
+POIN SkillTester
+WORD BoonID
+
+ALIGN 4
+Discipline:
+#incbin "Discipline/Discipline.dmp"
+POIN SkillTester
+WORD DisciplineID
+WORD DisciplinePlusID
+WORD ArmsMasterID
+
+ALIGN 4
+LiveToServe:
+#incbin "LiveToServe/LiveToServe.dmp"
+POIN SkillTester
+WORD LiveToServeID
+
+ALIGN 4
+LockTouch:
+#incbin "Locktouch/LockTouch.dmp"
+POIN SkillTester
+WORD LockTouchID
+
+ALIGN 4
+Lunge:
+#incbin "Lunge/lunge.dmp"
+
+ALIGN 4
+Vantage:
+#incbin "Vantage/vantage.dmp"
+POIN SkillTester
+WORD VantageID
+WORD VantagePlusID
+
+#define VigorDanceBit "(8*9)+5" //8*byte + bit of the debuff table to use
+
+ALIGN 4
+VigorDanceSkill: //set a bit in the debuff table's entry for the refreshed unit
+#include "VigorDance/vigordanceskill.lyn.event"
+POIN SkillTester
+WORD VigorDanceID
+
+ALIGN 4
+VigorDanceCheck: //check if the bit is set and if so give the unit some stats
+#include "VigorDance/vigordancecheck.lyn.event"
+
+ALIGN 4
+VigorDanceReset:
+#include "VigorDance/vigordancereset.lyn.event"
+
+
+
+#include "TriangleAttack/TriangleAttack.lyn.event"
+ALIGN 4
+TriangleAttackIDLink:
+BYTE TriangleAttackID
+
+ALIGN 4
+#include "Paragon/ParagonMisc.lyn.event"
+ParagonIDLink:
+BYTE ParagonID
+
+#include "Synchronize/Synchronize.lyn.event"
+SynchronizeIDLink:
+BYTE SynchronizeID
+
+#include "ShrewdPotential/ShrewdPotential.lyn.event" 
+ALIGN 4 
+ShrewdPotentialID_Link: 
+WORD ShrewdPotentialID 
+ShrewdPotentialAmount_Link: 
+WORD 1
+
+ALIGN 4
+ConcealedWeapon:
+#incbin "ConcealedWeapon/ConcealedWeapon.dmp"
+POIN SkillTester
+WORD ConcealedWeaponID

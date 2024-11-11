@@ -1,0 +1,18 @@
+ALIGN 4
+TriangleAdept:
+#incbin "TriangleAdept/TriangleAdept.dmp"
+POIN SkillTester
+WORD TriAdeptID
+WORD TriAdeptPlusID
+
+ALIGN 4
+Poise:
+#incbin "Poise/Poise.dmp"
+POIN SkillTester
+WORD PoiseID
+
+ALIGN 4
+Nonconforming:
+#incbin "Nonconforming/Nonconforming.dmp"
+POIN SkillTester
+WORD NonconformingID
