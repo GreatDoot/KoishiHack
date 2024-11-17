@@ -6,7 +6,7 @@
 
 for /f "tokens=*" %%m in (png.txt) do echo %%m
 
-for /f "tokens=*" %%m in (png.txt) do ..\..\..\EventAssembler\Tools\Png2Dmp.exe %%m --lz77
+for /f "tokens=*" %%m in (png.txt) do ..\..\..\EventAssembler\Tools\Png2Dmp.exe %%m --lz77 -o %%~nm.dmp -po %%~nm_palette.dmp
 
 echo ----------
 

@@ -1,5 +1,9 @@
+//Pointer to main stat screen at $88638
+//Pointer to main stat screen palette at $88640
+//Pointer to spinny at $88620
+
 ALIGN 4
-Remove_spinny:
+RemoveSpinny:
 #incbin "dmp/RemoveSpinny.dmp"
 
 ALIGN 4
@@ -8,13 +12,15 @@ StatScreenMain:
 
 ALIGN 4
 StatScreenPalette:
-#incbin "dmp/statscreenpalette.dmp"
+#incbin "dmp/20th_century_fucks_palette.dmp"
 
 PUSH
-ORG 0xA03368
+
+ORG $88620
+POIN RemoveSpinny
+ORG $88638
 POIN StatScreenMain
-ORG 0xA06460
+ORG $88640
 POIN StatScreenPalette
-ORG 0xA064E0
-POIN Remove_spinny
+
 POP
