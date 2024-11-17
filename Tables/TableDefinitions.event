@@ -184,6 +184,80 @@
 //status staves will give 
 #define ItemStatus(StatusID,Duration) "StatusID | (Duration << 4)"
 
+//Spell Anims
+#define HandAxeSpellID 0x01
+#define ArrowSpellID 0x02
+#define Javelin1SpellID 0x03
+#define Javelin2SpellID 0x04
+#define Javelin3SpellID 0x05
+#define Javelin4SpellID 0x06
+#define Javelin5SpellID 0x07
+#define Javelin6SpellID 0x08
+#define Javelin7SpellID 0x09
+#define Javelin8SpellID 0x0A
+#define Javelin9SpellID 0x0B
+#define Javelin10SpellID 0x0C
+#define Javelin11SpellID 0x0D
+#define DancePlay1SpellID 0x0E
+#define DancePlay2SpellID 0x0F
+#define BallistaSpellID 0x10
+
+#define BindingBladeSpellID 0x12
+#define FlametongueSpellID 0x13
+#define HolyDragonStoneSpellID 0x14
+#define IdunnDragonStoneSpellID 0x15
+#define FireSpellID 0x16
+#define ElfireSpellID 0x17
+
+#define ThunderSpellID 0x19
+#define BoltingSpellID 0x1A
+#define FimbulvetrSpellID 0x1B
+#define AircaliburSpellID 0x1C
+#define FluxSpellID 0x1D
+#define NosferatuSpellID 0x1E
+#define LightningSpellID 0x1F
+#define PurgeSpellID 0x20
+
+#define DivineSpellID 0x22
+
+#define EclipseSpellID 0x24
+#define FenrirSpellID 0x25
+#define HealSpellID 0x26
+#define MendSpellID 0x27
+#define RecoverSpellID 0x28
+#define PhysicSpellID 0x29
+#define FortifySpellID 0x2A
+#define LatonaSpellID 0x2B
+#define RestoreSpellID 0x2C
+#define SilenceSpellID 0x2D
+#define SleepSpellID 0x2E
+#define HammerneSpellID 0x2F
+#define BerserkSpellID 0x30
+#define BarrierSpellID 0x31
+#define PromoItemsSpellID 0x32
+#define ShineSpellID 0x33
+#define LunaSpellID 0x34
+#define ExcaliburSpellID 0x35
+
+#define AuraSpellID 0x37
+
+#define FillasMightSpellID 0x3A
+#define NinisGraceSpellID 0x3B
+#define ThorsIreSpellID 0x3C
+#define SetsLitanySpellID 0x3D
+#define StoneSpellID 0x3E
+#define IvaldiSpellID 0x3F
+#define DemonLightSpellID 0x40
+#define GleipnirSpellID 0x41
+#define CrimsonEyeSpellID 0x42
+#define EvilEyeSpellID 0x43
+#define ShadowshotSpellID 0x44
+#define DemonSurgeSpellID 0x45
+#define NaglfarSpellID 0x46
+#define WretchedAirSpellID 0x47
+#define MapAnimOnlySpellID 0xFFFE
+#define NoneSpellID 0xFFFF
+
 #endif
 
 #include "ExternalTables.event"
