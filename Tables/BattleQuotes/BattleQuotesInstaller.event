@@ -1,0 +1,15 @@
+/* Repoint */ PUSH; ORG 0x846AC; POIN NewBattleQuoteTable; POP
+
+//Definitions
+#define BattleQuote(entry, attacker, defender, map, flag, text) "PUSH; ORG NewBattleQuoteTable + (0x10 * entry); SHORT attacker defender map flag text 0; WORD 0; BYTE 0; POP"
+#define BattleQuoteEvent(entry, attacker, defender, map, flag, event) "PUSH; ORG NewBattleQuoteTable + (0x10 * entry); SHORT attacker defender map flag 0 0; POIN event; BYTE 0; POP"
+#define BattleQuoteBothWays(entry, attacker, defender, map, flag, text) "PUSH; ORG NewBattleQuoteTable + (0x10 * entry); SHORT attacker defender map flag text 0; WORD 0; BYTE 0; ORG NewBattleQuoteTable + (0x10 * (entry+1)); SHORT defender attacker map flag text 0; WORD 0; BYTE 0; POP"
+#define BattleQuoteEventBothWays(entry, attacker, defender, map, flag, event) "PUSH; ORG NewBattleQuoteTable + (0x10 * entry); SHORT attacker defender map flag 0 0; POIN event; BYTE 0; ORG NewBattleQuoteTable + (0x10 * (entry+1)); SHORT defender attacker map flag 0 0; POIN event; BYTE 0; POP"
+
+//Table
+ALIGN 4
+NewBattleQuoteTable:
+FILL 1024
+SHORT 0xFFFF 0; WORD 0 0 0 //End table
+
+BattleQuoteBothWays(0, 0x00, 0x68, 0x00, 0x01, 0x935)

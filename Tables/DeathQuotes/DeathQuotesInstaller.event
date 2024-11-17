@@ -1,0 +1,13 @@
+/* Repoint */ PUSH; ORG 0x8472C; POIN NewDeathQuoteTable; POP
+
+//Definitions
+#define DeathQuote(entry, unit, chapter, flag, text) "PUSH; ORG NewDeathQuoteTable + (0xC * entry); BYTE unit 0 0xFF chapter; SHORT flag text; WORD 0; POP"
+#define DeathQuoteEvent(entry, unit, chapter, flag, event) "PUSH; ORG NewDeathQuoteTable + (0xC * entry); BYTE unit 0 0xFF chapter; SHORT flag 0; POIN event; POP"
+
+//Table
+ALIGN 4
+NewDeathQuoteTable:
+FILL 1024
+SHORT 0xFFFF 0; WORD 0 0 //End table
+
+DeathQuote(0, 0x68, 0x00, 0x2, 0xC43)

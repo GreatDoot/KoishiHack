@@ -80,3 +80,7 @@ WORD 0xFFFFFFFF 0xFFFFFFFF // For FEBuilder to show no further data with
 
 	BYTE 0x0	//end of list
 #endif
+
+#include "BattleQuotes/BattleQuotesInstaller.event"
+#include "DeathQuotes/DeathQuotesInstaller.event"
+#include "BossBGM/BossBGMInstaller.event"

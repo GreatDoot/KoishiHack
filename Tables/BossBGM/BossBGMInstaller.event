@@ -1,0 +1,12 @@
+/* Repoint */ PUSH; ORG 0x72908; POIN NewBossBGMTable; POP
+
+//Definitions
+#define BossBGM(entry, unit, song) "PUSH; ORG NewBossBGMTable + (0x8 * entry); SHORT unit 0 song 0; POP"
+
+//Table
+ALIGN 4
+NewBossBGMTable:
+FILL 2048
+WORD 0xFFFFFFFF 0xFFFFFFFF //End Table
+
+BossBGM(0, 0x68, 0x1C)
