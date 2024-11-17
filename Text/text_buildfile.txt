@@ -123,3 +123,5 @@ a skill when used.[X]
 #include "unitinfo_text.txt"
 
 #include "unitname_text.txt"
+
+#include "unitdesc_text.txt"
