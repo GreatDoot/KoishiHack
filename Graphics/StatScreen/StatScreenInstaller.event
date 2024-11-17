@@ -1,0 +1,20 @@
+ALIGN 4
+Remove_spinny:
+#incbin "dmp/RemoveSpinny.dmp"
+
+ALIGN 4
+StatScreenMain:
+#incbin "dmp/20th_century_fucks.dmp"
+
+ALIGN 4
+StatScreenPalette:
+#incbin "dmp/statscreenpalette.dmp"
+
+PUSH
+ORG 0xA03368
+POIN StatScreenMain
+ORG 0xA06460
+POIN StatScreenPalette
+ORG 0xA064E0
+POIN Remove_spinny
+POP

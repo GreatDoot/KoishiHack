@@ -39,6 +39,10 @@
 	
     MESSAGE Used free space ends at currentOffset
 
+    ALIGN 4
+    Actually:
+    BYTE $61 $63 $74 $75 $61 $6C $6C $79 
+    
     MESSAGE "actually i think that satori should be the main character"
 #else
     ERROR "You are not assembling FE8 events!"
