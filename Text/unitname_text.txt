@@ -1,2 +1,5 @@
 # 0x212 KoishiName
 Koishi[X]
+
+# 0x213 SatoriName
+Satori[X]
