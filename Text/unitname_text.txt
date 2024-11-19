@@ -14,7 +14,7 @@ Minjar[X]
 Anastasia[X]
 
 # 0x217 NyrName^
-Nýrlestia
+Nyrlestia[X]
 
 # 0x218 PotName^
-Potential Man
+Suncliff[X]

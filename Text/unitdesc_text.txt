@@ -18,11 +18,12 @@ Minjar's twin sister, serious and caring.[NL]
 So frail you wonder how she got here.[X]
 
 # 0x273 NyrDesc
-Ast's mother who disappeared to protect him.[NL]
+Ast's mother who mysteriously disappeared.[NL]
 Recovering workaholic.[X]
 
 # 0x274 PotDesc
-Look at how happy he is!
+give me liberty give me fire[NL]
+give me rags or i retire[X]
 
 # 0x27c EphraimDesc
 Second lord of the hack.[NL]
