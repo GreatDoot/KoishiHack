@@ -4,6 +4,26 @@ most flanderised character ever[X]
 # 0x26f SatoriDesc
 smugtori more like[X]
 
+# 0x270 AstDesc
+A family loving, quiet priest.[NL]
+Why's he here, though?[X]
+
+# 0x271 MinjarDesc
+Ast's father, calm yet hardworking.[NL]
+He misses his wife, much like...[NL]
+a certain doctor.[X]
+
+# 0x272 AnaDesc
+Minjar's twin sister, serious and caring.[NL]
+So frail you wonder how she got here.[X]
+
+# 0x273 NyrDesc
+Ast's mother who disappeared to protect him.[NL]
+Recovering workaholic.[X]
+
+# 0x274 PotDesc
+Look at how happy he is!
+
 # 0x27c EphraimDesc
-Second lord of the hack.[NL][X]
+Second lord of the hack.[NL]
 Undecided as of now.[X]

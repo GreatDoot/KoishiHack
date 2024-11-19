@@ -3,3 +3,18 @@ Koishi[X]
 
 # 0x213 SatoriName
 Satori[X]
+
+# 0x214 AstName^
+Ast Benris[X]
+
+# 0x215 MinjarName^
+Minjar[X]
+
+# 0x216 AnaName^
+Anastasia[X]
+
+# 0x217 NyrName^
+Nýrlestia
+
+# 0x218 PotName^
+Potential Man
