@@ -6,22 +6,25 @@ Koishi's older sister, a secluded person.[NL]
 A satori whose mind-reading prowess,[NL]
 and smugness, are second to none.[X]
 
-# 0x270 AstDesc
-A family loving, quiet priest.[NL]
-Why's he here, though?[X]
+# 0x270 AstDesc^
+A calm and quiet curate in search of his mother.[NL]
+He comes from a family bound with strong ties to each[NL]
+other, though he's a bit of an introvert on the edge...[X]
 
-# 0x271 MinjarDesc
-Ast's father, calm yet hardworking.[NL]
-He misses his wife, much like...[NL]
-a certain doctor.[X]
+# 0x271 MinjarDesc^
+A courageous mercenary with a passion for arts[NL]
+and crafts. Heroic-looking, but "pretty clumsy and[NL]
+hot-headed" (according to his sister and wife).[X]
 
-# 0x272 AnaDesc
-Minjar's twin sister, serious and caring.[NL]
-So frail you wonder how she got here.[X]
+# 0x272 AnaDesc^
+A brave and unafraid mistress of the blade, with[NL]
+a deep love for her family. "Strong, but with a[NL]
+big lack of braincells" (according to her brother).[X]
 
-# 0x273 NyrDesc
-Ast's mother who mysteriously disappeared.[NL]
-Recovering workaholic.[X]
+# 0x273 NyrDesc^
+A pioneer of arts and crafts, and a skilled user of[NL]
+the bow. Ast's mother. "Silly and susceptible, but[NL]
+lovable all the same" (according to her husband).[X]
 
 # 0x274 PotDesc
 give me liberty give me fire[NL]
