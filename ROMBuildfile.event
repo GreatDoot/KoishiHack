@@ -38,12 +38,10 @@
 	ASSERT (FreeSpaceEnd - currentOffset) // So that you don't overwrite vanilla tables if using default freespace
 	
     MESSAGE Used free space ends at currentOffset
-
-    ALIGN 4
-    Actually:
-    BYTE $61 $63 $74 $75 $61 $6C $6C $79 
     
     MESSAGE "actually i think that we should kill dittoomfie"
+
+    MESSAGE "greatdoot is an evil creature"
 #else
     ERROR "You are not assembling FE8 events!"
 #endif

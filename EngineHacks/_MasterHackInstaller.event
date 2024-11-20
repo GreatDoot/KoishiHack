@@ -233,6 +233,8 @@ POP
   // Save/Suspend Expansion
     #include "Necessary/ExpandedModularSave/ExModularSave.event"
 
-  //BattleBGMCustomiser
+  //BattleBGMCustomiser - ditto
   #include "ExternalHacks/BattleBGMCustomiser/Installer.event"
 
+  //FogDR - Huichelaar
+  #include "ExternalHacks/FogDR/FogDR.event"

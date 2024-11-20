@@ -1,0 +1,7 @@
+//Replacing Vanilla Palettes
+PUSH
+
+ORG 0x1AEBF0
+#incbin "output/FieldsPal1.dmp"
+
+POP
