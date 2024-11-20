@@ -18,3 +18,9 @@ Nyrlestia[X]
 
 # 0x218 PotName^
 Suncliff[X]
+
+# 0x219 FreiName^
+Freischütz[X]
+
+# 0x21A FuneralName
+Funeral[X]
