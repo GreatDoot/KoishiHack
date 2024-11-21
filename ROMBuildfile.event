@@ -42,6 +42,8 @@
     MESSAGE "actually i think that we should kill dittoomfie"
 
     MESSAGE "greatdoot is an evil creature"
+
+    MESSAGE "play library of ruina on steam or nintendo switch"
 #else
     ERROR "You are not assembling FE8 events!"
 #endif

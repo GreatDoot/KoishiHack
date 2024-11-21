@@ -24,3 +24,6 @@ Freischütz[X]
 
 # 0x21A FuneralName
 Funeral[X]
+
+# 0x21B YujinName
+Yujin[X]

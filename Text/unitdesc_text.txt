@@ -30,11 +30,15 @@ lovable all the same" (according to her husband).[X]
 give me liberty give me fire[NL]
 give me rags or i retire[X]
 
-# 0x256 FreiDesc
+# 0x275 FreiDesc
 7[X]
 
-# 0x257 FuneralDesc
+# 0x276 FuneralDesc
 DING DING DING DING[X]
+
+# 0x277 YujinDesc
+spoilers, ditto.[NL]
+finish ruina NOW!!!![X]
 
 # 0x27c EphraimDesc
 Second lord of the hack.[NL]
