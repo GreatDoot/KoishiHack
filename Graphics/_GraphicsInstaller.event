@@ -1,4 +1,4 @@
-//#include "Mugs/Mugs Installer.event"
+#include "Mugs/Mugs Installer.event"
 
 //#include "MapSprites/Installer.event"
 

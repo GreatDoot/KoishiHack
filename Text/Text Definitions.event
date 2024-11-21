@@ -591,5 +591,24 @@
 #define EirikaHeightID $F72
 #define KoishiName $212
 #define SatoriName $213
+#define AstName $214
+#define MinjarName $215
+#define AnaName $216
+#define NyrName $217
+#define PotName $218
+#define FreiName $219
+#define FuneralName $21A
+#define YujinName $21B
+#define KoishiDesc $26E
+#define SatoriDesc $26F
+#define AstDesc $270
+#define MinjarDesc $271
+#define AnaDesc $272
+#define NyrDesc $273
+#define PotDesc $274
+#define FreiDesc $275
+#define FuneralDesc $276
+#define YujinDesc $277
+#define EphraimDesc $27C
 
 #endif // TEXT_DEFINITIONS_TEXT_BUILDFILE_TXT

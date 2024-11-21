@@ -1,14 +1,14 @@
 ALIGN 4
-GaryPointMug:
-#incbin "GaryPoint_mug.dmp"
-#incbin "GaryPoint_frames.dmp"
-#incbin "GaryPoint_palette.dmp"
-#incbin "GaryPoint_minimug.dmp"
+KoishiMug:
+#incbin "Koishi_mug.dmp"
+#incbin "Koishi_frames.dmp"
+#incbin "Koishi_palette.dmp"
+#incbin "Koishi_minimug.dmp"
 
 ALIGN 4
-RosheaMug:
-#incbin "Roshea_mug.dmp"
-#incbin "Roshea_frames.dmp"
-#incbin "Roshea_palette.dmp"
-#incbin "Roshea_minimug.dmp"
+SatoriMug:
+#incbin "Satori_mug.dmp"
+#incbin "Satori_frames.dmp"
+#incbin "Satori_palette.dmp"
+#incbin "Satori_minimug.dmp"
 

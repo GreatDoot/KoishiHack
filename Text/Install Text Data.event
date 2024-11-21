@@ -2365,6 +2365,82 @@ __TEXTPROCESS213:
 #incext ParseFile ".TextEntries/text_buildfileSatoriName.fetxt"
 setText($213, __TEXTPROCESS213)
 
+__TEXTPROCESS214:
+#incext ParseFile ".TextEntries/text_buildfileAstName.fetxt"
+setText($214, __TEXTPROCESS214)
+
+__TEXTPROCESS215:
+#incext ParseFile ".TextEntries/text_buildfileMinjarName.fetxt"
+setText($215, __TEXTPROCESS215)
+
+__TEXTPROCESS216:
+#incext ParseFile ".TextEntries/text_buildfileAnaName.fetxt"
+setText($216, __TEXTPROCESS216)
+
+__TEXTPROCESS217:
+#incext ParseFile ".TextEntries/text_buildfileNyrName.fetxt"
+setText($217, __TEXTPROCESS217)
+
+__TEXTPROCESS218:
+#incext ParseFile ".TextEntries/text_buildfilePotName.fetxt"
+setText($218, __TEXTPROCESS218)
+
+__TEXTPROCESS219:
+#incext ParseFile ".TextEntries/text_buildfileFreiName.fetxt"
+setText($219, __TEXTPROCESS219)
+
+__TEXTPROCESS21A:
+#incext ParseFile ".TextEntries/text_buildfileFuneralName.fetxt"
+setText($21A, __TEXTPROCESS21A)
+
+__TEXTPROCESS21B:
+#incext ParseFile ".TextEntries/text_buildfileYujinName.fetxt"
+setText($21B, __TEXTPROCESS21B)
+
+__TEXTPROCESS26E:
+#incext ParseFile ".TextEntries/text_buildfileKoishiDesc.fetxt"
+setText($26E, __TEXTPROCESS26E)
+
+__TEXTPROCESS26F:
+#incext ParseFile ".TextEntries/text_buildfileSatoriDesc.fetxt"
+setText($26F, __TEXTPROCESS26F)
+
+__TEXTPROCESS270:
+#incext ParseFile ".TextEntries/text_buildfileAstDesc.fetxt"
+setText($270, __TEXTPROCESS270)
+
+__TEXTPROCESS271:
+#incext ParseFile ".TextEntries/text_buildfileMinjarDesc.fetxt"
+setText($271, __TEXTPROCESS271)
+
+__TEXTPROCESS272:
+#incext ParseFile ".TextEntries/text_buildfileAnaDesc.fetxt"
+setText($272, __TEXTPROCESS272)
+
+__TEXTPROCESS273:
+#incext ParseFile ".TextEntries/text_buildfileNyrDesc.fetxt"
+setText($273, __TEXTPROCESS273)
+
+__TEXTPROCESS274:
+#incext ParseFile ".TextEntries/text_buildfilePotDesc.fetxt"
+setText($274, __TEXTPROCESS274)
+
+__TEXTPROCESS275:
+#incext ParseFile ".TextEntries/text_buildfileFreiDesc.fetxt"
+setText($275, __TEXTPROCESS275)
+
+__TEXTPROCESS276:
+#incext ParseFile ".TextEntries/text_buildfileFuneralDesc.fetxt"
+setText($276, __TEXTPROCESS276)
+
+__TEXTPROCESS277:
+#incext ParseFile ".TextEntries/text_buildfileYujinDesc.fetxt"
+setText($277, __TEXTPROCESS277)
+
+__TEXTPROCESS27C:
+#incext ParseFile ".TextEntries/text_buildfileEphraimDesc.fetxt"
+setText($27C, __TEXTPROCESS27C)
+
 }
 
 #endif // TEXT_INSTALLER_TEXT_BUILDFILE_TXT
