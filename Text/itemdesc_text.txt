@@ -1,2 +1,2 @@
-# 0x404 IronSwordDesc
-not found[X]
+# 0x404 IronSwordDesc^
+A repurposed kitchen knife, due to lakcing options.[X]
