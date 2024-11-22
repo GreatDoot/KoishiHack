@@ -6,6 +6,9 @@ POIN SnowTilesetPAL //0xED
 POIN SnowTilesetCONFIG //0xEE
 WORD 0 //Terminator
 
+#define EventPointerListOffset NewPLIST
+#define EventPointerTable(id,offset) "PUSH; ORG EventPointerListOffset+(4*id); POIN offset; POP"
+
 //Repointing
 PUSH
 ORG 0x19900
