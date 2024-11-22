@@ -1,30 +1,15 @@
+/* Repointing */ PUSH;ORG 0x19900;POIN NewPLIST;ORG 0x19968;POIN NewPLIST;ORG 0x1999C;POIN NewPLIST;ORG 0x30134;POIN NewPLIST;ORG 0x30C78;POIN NewPLIST;ORG 0x34680;POIN NewPLIST;ORG 0x346AC;POIN NewPLIST;ORG 0x346DC;POIN NewPLIST;POP
+
 ALIGN 4
 NewPLIST:
 #incbin "VanillaPLIST.dmp" //0x00 - 0xEB
-POIN SnowTilesetOBJ //0xEC
-POIN SnowTilesetPAL //0xED
-POIN SnowTilesetCONFIG //0xEE
+FILL 80
 WORD 0 //Terminator
 
 #define EventPointerListOffset NewPLIST
 #define EventPointerTable(id,offset) "PUSH; ORG EventPointerListOffset+(4*id); POIN offset; POP"
 
-//Repointing
-PUSH
-ORG 0x19900
-POIN NewPLIST
-ORG 0x19968
-POIN NewPLIST
-ORG 0x1999C
-POIN NewPLIST
-ORG 0x30134
-POIN NewPLIST
-ORG 0x30C78
-POIN NewPLIST
-ORG 0x34680
-POIN NewPLIST
-ORG 0x346AC
-POIN NewPLIST
-ORG 0x346DC
-POIN NewPLIST
-POP
+EventPointerTable(0xEC,SnowTilesetOBJ)
+EventPointerTable(0xED,SnowTilesetPAL)
+EventPointerTable(0xEE,SnowTilesetCONFIG)
+
