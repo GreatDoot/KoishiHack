@@ -1,0 +1,15 @@
+#include "palettes/Installer.event"
+
+ALIGN 4
+SnowTilesetOBJ:
+#incbin "dmp/Snow-graphics.dmp"
+
+ALIGN 4
+SnowTilesetPAL:
+#incbin "palettes/output/Snow-palette.dmp"
+
+ALIGN 4
+SnowTilesetCONFIG:
+#incbin "dmp/Snow-mapchip.dmp"
+
+#include "Repointed_PLIST.event"

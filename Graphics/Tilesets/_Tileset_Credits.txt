@@ -1,1 +1,2 @@
 TilesetFogFilter.py from FogDR by Huichelaar
+Snow Tileset from FE6

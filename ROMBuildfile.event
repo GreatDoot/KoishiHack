@@ -27,6 +27,11 @@
     #include "Music/_MusicInstaller.event"
     MESSAGE Used music space ends at currentOffset
 
+    //Maps
+    #include "Maps/MasterMapInstaller.event"
+    MESSAGE Used maps space ends at currentOffset
+
+    /*
 	#ifdef USE_TEST_MAP
     //Events
     #include "Events/Release_map.event"
@@ -35,7 +40,8 @@
     //Maps
     #include "Maps/MasterMapInstaller.event"
     #endif // USE_TEST_MAP
-	
+	*/
+
 	ASSERT (FreeSpaceEnd - currentOffset) // So that you don't overwrite vanilla tables if using default freespace
 	
     MESSAGE Used free space ends at currentOffset

@@ -10,7 +10,7 @@
 
 //#include "Palettes/Palette Installer.event" //must be included after anims are
 
-#include "Tilesets/TilesetInstaller.event"
+#include "Tilesets/_TilesetInstaller.event"
 
 #include "StatScreen/StatScreenInstaller.event"
 
