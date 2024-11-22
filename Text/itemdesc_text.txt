@@ -1,2 +1,8 @@
-# 0x404 IronSwordDesc
-not found[X]
+# 0x404 IronSwordDesc^
+A repurposed kitchen knife, due to lacking options.[X]
+
+# 0x419 IronLanceDesc^
+A once normal cane, taken from a psychotic old man.[X]
+
+# 0x42a IronAxeDesc^
+A lumberjack's makeshift combat axe, unfit for war.[X]
