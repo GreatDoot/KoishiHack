@@ -1,0 +1,11 @@
+{
+    #include "beautiful.event"
+}
+
+PUSH
+//Skip very begining world map - Contro
+ORG $A39768
+EVBIT_MODIFY 0x1
+SKIPWN
+ENDA
+POP

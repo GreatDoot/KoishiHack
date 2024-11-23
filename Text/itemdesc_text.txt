@@ -1,8 +1,17 @@
 # 0x404 IronSwordDesc^
 A repurposed kitchen knife, due to lacking options.[X]
 
+# 0x406 SteelSwordDesc^
+A standard and affordable sword of good quality.[X]
+
 # 0x419 IronLanceDesc^
 A once normal cane, taken from a psychotic old man.[X]
 
+# 0x41b SteelLanceDesc^
+A cheap yet reliable model most used by soldiers.[X]
+
 # 0x42a IronAxeDesc^
 A lumberjack's makeshift combat axe, unfit for war.[X]
+
+# 0x42b SteelAxeDesc^
+A common and well-built axe used by all armies.[X]

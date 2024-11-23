@@ -31,6 +31,10 @@
     #include "Maps/MasterMapInstaller.event"
     MESSAGE Used maps space ends at currentOffset
 
+    //Events
+    #include "Events/MasterEventInstaller.event"
+    MESSAGE Used event space ends at currentOffset
+
     /*
 	#ifdef USE_TEST_MAP
     //Events

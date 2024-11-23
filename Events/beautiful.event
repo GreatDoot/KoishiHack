@@ -1,0 +1,67 @@
+EventPointerTable(0x7,ThisChapter)
+
+setText(0x160, NewChName)
+ALIGN 4
+NewChName:
+String("Ch1: amogus")
+BYTE 0
+
+
+ALIGN 4
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+Units:
+UNIT Koishi KoishiLord 0x1 Level(1,Ally,0) [2,7] 0 0 0 0 [0x1,0x9,0x6c,0x0] NoAI 
+UNIT Satori Sage_F 0x1 Level(1,Ally,0) [3,8] 0 0 0 0 [0x38,0x4B,0x6c,0x0] NoAI
+
+ALIGN 4
+EnemyUnits:
+UNIT 0x68 0x3F 0x68 Level(3,Enemy,1) [13,2] 0 0 0 0 [0x3,0x16,0x20,0x00] NeverMoveAI
+UNIT 0x80 0x3F 0x68 Level(1,Enemy,1) [13,5] 0 0 0 0 [0x3,0x16,0x20,0x00] NeverMoveAI
+
+ALIGN 4
+BeginningScene:
+LOAD1 0x0 Units
+LOAD1 0x1 EnemyUnits
+NoFade
+ENDA
+
+EndingScene:
+MNTS 0x1
+NoFade
+ENDA
