@@ -49,6 +49,7 @@ strh r2, [r4, r1]
 
 End:
 pop {r4-r5}
+bx lr
 
 .align
 .ltorg
