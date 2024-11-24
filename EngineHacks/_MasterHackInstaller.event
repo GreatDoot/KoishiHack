@@ -238,3 +238,6 @@ POP
 
   //FogDR - Huichelaar
   #include "ExternalHacks/FogDR/FogDR.event"
+
+  //BladeWolfFunny
+  #include "ExternalHacks/BladeWolfFunny/BladeWolfFunny.event"
