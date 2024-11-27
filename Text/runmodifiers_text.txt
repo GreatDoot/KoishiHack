@@ -1,0 +1,75 @@
+#0xF6D AskToModifyGame
+Would you like to modify the game?[NL]
+[Yes][X]
+
+#0xF6E FogModeMenuOption
+Fog Mode Toggle[X]
+
+#0xF6F FogModeRangeMenuOption
+Fog Mode Range[X]
+
+#0xF70 ExplainMenuOption
+Explain this page...[X]
+
+#0xF71 NextPageMenuOption
+Next Page...[X]
+
+#0xF72 PreviousPageMenuOption
+Previous Page...[X]
+
+#0xF73 ResetAllMenuOption
+Reset All Modifiers[X]
+
+#0xF74 FinishMenuOption
+Finish Modifications[X]
+
+#0xF75 Crit100MenuOption
+100% Crit[X]
+
+#0xF76 Crit0MenuOption
+0% Crit[X]
+
+#0xF77 Hit100MenuOption
+100% Hit[X]
+
+#0xF78 ReverseModeMenuOption
+Reverse Mode[X]
+
+#0xF79 PlayerReverseModeMenuOption
+Player Reverse Mode[X]
+
+#0xF7A FairReverseModeMenuOption
+Fair Reverse Mode[X]
+
+#0xF7B Growths0MenuOption
+0% Growths[X]
+
+#0xF7C Growths100MenuOption
+100% Growths[X]
+
+#0xF7D GrowthsMinMenuOption
+Min% Growths[X]
+
+#0xF7E ConfirmFinishSelection
+There's no coming back.[NL]
+Are you happy with the modifications?[NL]
+[No][X]
+
+#0xF7F FogModeEnabled
+Fog Mode is now [ToggleRed]enabled.[ToggleRed][A][X]
+
+#0xF80 FogModeDisabled
+Fog Mode is now [ToggleRed]disabled.[ToggleRed][A][X]
+
+#0xF81 FogModeRangeTitle
+Fog Mode Range[X]
+
+#0xF82 FogModeRangeText1
+Select the range of vision[NL]
+for the additional fog of war[NL]
+when Fog Mode is enabled.[X]
+
+#0xF83 FogModeRangeText2
+This will not apply to maps[NL]
+which are by default fog of[NL]
+war maps, which use their range.[X]

@@ -1,0 +1,2 @@
+#define ClearBGMacro "CALL $89EE2C4" //Vanilla macro event
+#define TutorialTextBox(textID) "SVAL sB 0xFFFFFFFF; TUTORIALTEXTBOXSTART; TEXTSHOW textID; TEXTEND; REMA"

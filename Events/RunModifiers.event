@@ -1,0 +1,77 @@
+//Fog Mode stuff, mainly.
+
+//Main "Run Modifier Selection" screen kept here to keep prologue .event uncluttered
+
+ALIGN 4
+RunModifiersEvent:
+EVBIT_MODIFY 1
+TutorialTextBox(AskToModifyGame)
+SVAL s1 0x1
+BNE 0 s1 sC //If they DIDN'T select Yes, end event.
+    CALL RunModifiersEvent_Page1 //If they DID select Yes, do the *funky stuff*tm
+LABEL 0
+EVBIT_MODIFY 0
+ENDA
+
+ALIGN 4
+RunModifiersEvent_Page1:
+EVBIT_MODIFY 1
+LABEL 0
+ASMC GameModifiersPage1ChoiceMenu+1
+BEQ 1 s0 sC
+SVAL s1 0x1
+BEQ 2 s1 sC
+SVAL s1 0x2
+BEQ 3 s1 sC
+SVAL s1 0x3
+BEQ 4 s1 sC
+SVAL s1 0x4
+BEQ 5 s1 sC
+GOTO 100
+
+//Fog Mode Toggle
+LABEL 1
+CHECK_EVENTID 0x129
+BEQ 10 sC s0
+    TutorialTextBox(FogModeDisabled)
+    ENUF 0x129
+    GOTO 0
+LABEL 10
+    TutorialTextBox(FogModeEnabled)
+    ENUT 0x129
+    GOTO 0
+
+//Fog Mode Range
+LABEL 2
+SVAL s1 4 // initial value of number
+SVAL s2 1 // min
+SVAL s3 8 // max
+SVAL s4 FogModeRangeTitle // text id like 0x505 - Title
+SVAL s5 FogModeRangeText1 // text id like 0x505 - line 1-3
+SVAL s6 FogModeRangeText2 // text id like 0x505 - line 4-6
+ASMC StartNumberEntry
+SSUB s1 sC s2
+ASMC WriteFogModeLevel
+
+LABEL 3
+
+LABEL 4
+
+LABEL 5
+
+LABEL 100
+TutorialTextBox(ConfirmFinishSelection)
+SVAL s1 0x1
+BNE 0 s1 sC
+ENDA
+
+/*
+ExampleEvent:
+SVAL s1 12345 // initial value of number
+SVAL s2 15 // min 
+SVAL s3 123469 // max
+SVAL s4 GameSeedText // text id like 0x505 - Title 
+SVAL s5 GameSeedDesc // text id like 0x505 - line 1-3 
+SVAL s6 GameSeedDesc2 // text id like 0x505 - line 4-6 
+ASMC StartNumberEntry
+*/

@@ -239,5 +239,14 @@ POP
   //FogDR - Huichelaar
   #include "ExternalHacks/FogDR/FogDR.event"
 
-  //BladeWolfFunny
+  //BladeWolfFunny - ditto
   #include "ExternalHacks/BladeWolfFunny/BladeWolfFunny.event"
+
+  //LordSplitMenu - StanH
+  #include "ExternalHacks/LordSplitMenu/Installer.event"
+
+  //NumberEntry - Vesly
+  #include "ExternalHacks/ASM-NumberEntry/Installer.event"
+
+  //FogModeLevel - ditto
+  #include "ExternalHacks/FogModeLevel/FogModeLevel.lyn.event"
