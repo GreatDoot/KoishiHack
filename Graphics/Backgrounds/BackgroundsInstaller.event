@@ -1,0 +1,18 @@
+/* Repointing */ PUSH; ORG 0xE894; POIN NewBackgroundTable; ORG 0xECF4; POIN NewBackgroundTable; ORG 0xEDF8; POIN NewBackgroundTable; ORG 0x10E44; POIN NewBackgroundTable; POP;
+
+ALIGN 4
+NewBackgroundTable:
+#incbin "VanillaTable.dmp"
+
+PUSH
+ORG NewBackgroundTable+$278
+POIN NewBlackBGPalette
+ORG 0x958A58
+#incbin "dmp/NewBlackBG.dmp"
+ORG 0x95D1A8
+#incbin "dmp/NewBlackBG_TSA.dmp"
+POP
+
+ALIGN 4
+NewBlackBGPalette:
+#incbin "dmp/NewBlackBG_palette.dmp"

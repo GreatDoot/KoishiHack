@@ -5,19 +5,24 @@
 ALIGN 4
 RunModifiersEvent:
 EVBIT_MODIFY 1
+SetBackground(0x35)
 TutorialTextBox(AskToModifyGame)
 SVAL s1 0x1
 BNE 0 s1 sC //If they DIDN'T select Yes, end event.
+    ClearBGMacro
     CALL RunModifiersEvent_Page1 //If they DID select Yes, do the *funky stuff*tm
 LABEL 0
 EVBIT_MODIFY 0
+NoFade
 ENDA
 
 ALIGN 4
 RunModifiersEvent_Page1:
 EVBIT_MODIFY 1
 LABEL 0
+SetBackground(0x35)
 ASMC GameModifiersPage1ChoiceMenu+1
+ClearBGMacro
 BEQ 1 s0 sC
 SVAL s1 0x1
 BEQ 2 s1 sC
@@ -31,18 +36,22 @@ GOTO 100
 
 //Fog Mode Toggle
 LABEL 1
+SetBackground(0x35)
 CHECK_EVENTID 0x129
 BEQ 10 sC s0
     TutorialTextBox(FogModeDisabled)
     ENUF 0x129
+    ClearBGMacro
     GOTO 0
 LABEL 10
     TutorialTextBox(FogModeEnabled)
     ENUT 0x129
+    ClearBGMacro
     GOTO 0
 
 //Fog Mode Range
 LABEL 2
+SetBackground(0x35)
 SVAL s1 4 // initial value of number
 SVAL s2 1 // min
 SVAL s3 8 // max
@@ -52,6 +61,8 @@ SVAL s6 FogModeRangeText2 // text id like 0x505 - line 4-6
 ASMC StartNumberEntry
 SSUB s1 sC s2
 ASMC WriteFogModeLevel
+ClearBGMacro
+GOTO 0
 
 LABEL 3
 
@@ -63,6 +74,7 @@ LABEL 100
 TutorialTextBox(ConfirmFinishSelection)
 SVAL s1 0x1
 BNE 0 s1 sC
+NoFade
 ENDA
 
 /*

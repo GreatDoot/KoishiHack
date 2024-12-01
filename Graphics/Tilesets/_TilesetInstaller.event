@@ -1,4 +1,6 @@
-#include "palettes/Installer.event"
+ALIGN 4
+FieldsTilesetRedFogPAL:
+#incbin "palettes/output/FieldsPal1.dmp"
 
 ALIGN 4
 SnowTilesetOBJ:
@@ -12,4 +14,8 @@ ALIGN 4
 SnowTilesetCONFIG:
 #incbin "dmp/Snow-mapchip.dmp"
 
-#include "Repointed_PLIST.event"
+SetTilesetObject(0xB, SnowTilesetOBJ)
+SetTilesetPalette(0x19, SnowTilesetPAL)
+SetTilesetConfig(0xB, SnowTilesetCONFIG)
+
+SetTilesetPalette(0x1A, FieldsTilesetRedFogPAL)

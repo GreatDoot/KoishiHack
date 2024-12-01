@@ -226,7 +226,7 @@ def genHeaderLines():
     yield "    #endif\n"
     yield "#endif\n\n"
 
-    yield '#define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*ChapterDataTableEntSize)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP"\n\n'
+    yield '#define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*ChapterDataTableEntSize)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; SetMapData(MapID,MapPointer); POP"\n\n'
 
     yield "#endif // TMX2EA\n\n"
 
@@ -313,7 +313,7 @@ def process(tmxFilename, eventFilename, dmpFilename, boolAddHeader):
 
             f.write('  TileMapEnd\n')
 
-            f.write("\nEventPointerTable({}, MapChangesData)\n".format(
+            f.write("\nSetTileChanges({}, MapChangesData)\n".format(
                 feMap.properties[KEY_PROPERTY_MAPCID]))
 
         f.write('\n}\n')

@@ -21,7 +21,8 @@ set "textprocess=%~dp0Tools\TextProcess\text-process-classic"
 set "ups=%~dp0Tools\ups\ups"
 set "parsefile=%~dp0EventAssembler\Tools\ParseFileUTF8.exe"
 set "tmx2ea=%~dp0Tools\tmx2ea\tmx2ea"
-set symcombo=%~dp0Tools\sym\SymCombo.exe
+set "symcombo=%~dp0Tools\sym\SymCombo.exe"
+
 
 @rem set %~dp0 into a variable because batch is stupid and messes with it when using conditionals?
 
@@ -54,7 +55,9 @@ if /I not [%1]==[quick] (
 
   cd "%base_dir%Maps"
   echo: | ("%tmx2ea%" -s -O "MasterMapInstaller.event")
-
+  
+  cd "%base_dir%Tools\PTABLE_Macro_Fix\
+  PTABLE_Macro_Fix.exe
 )
 
 echo:

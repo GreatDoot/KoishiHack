@@ -1,4 +1,4 @@
-EventPointerTable(0x7,ThisChapter)
+SetChapterEvents(0x1,ThisChapter)
 
 setText(0x160, NewChName)
 ALIGN 4
@@ -60,9 +60,7 @@ ALIGN 4
 BeginningScene:
 LOAD1 0x0 Units
 LOAD1 0x1 EnemyUnits
-SetBackground(0x35)
-CALL RunModifiersEvent
-ClearBackground
+//CALL RunModifiersEvent
 NoFade
 ENDA
 

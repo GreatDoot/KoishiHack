@@ -3,15 +3,15 @@
  <tileset firstgid="1" source="FE6_Snow.tsx"/>
  <layer id="1" name="Tile Layer 1" width="15" height="10">
   <properties>
-   <property name="Anims1" value="5"/>
+   <property name="Anims1" value="1"/>
    <property name="Anims2" value="0"/>
    <property name="ChapterID" value="0"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="6"/>
-   <property name="MapID" value="4"/>
-   <property name="ObjectType" value="236"/>
-   <property name="PaletteID" value="237"/>
-   <property name="TileConfig" value="238"/>
+   <property name="MapChangesID" value="1"/>
+   <property name="MapID" value="1"/>
+   <property name="ObjectType" value="0xB"/>
+   <property name="PaletteID" value="0x19"/>
+   <property name="TileConfig" value="0xB"/>
   </properties>
   <data encoding="csv">
 67,67,67,67,67,67,67,67,67,67,67,67,939,940,941,
