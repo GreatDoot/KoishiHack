@@ -3,8 +3,7 @@ direct all questions at not me
 
 First Empty entry:
 Config - 0xB
-Object - 0xB
-Palette - 0x19
+Object/Palette - 0x24
 Tile Anim 1 - 0x6
 Tile Anim 2 - 0x2
 Map Data - 0x1
@@ -13,10 +12,10 @@ Events - 0x1
 
 Pointers:
 0x19900 - Tile Config
-0x19968 - OBJ
-0x1999C - PAL
-0x30134 - Tile Anim 1
-0x30C78 - Tile Anim 2
+0x19968 - OBJ \
+0x1999C - PAL -\ Use Same Table
+0x30134 - Tile Anim 1 \
+0x30C78 - Tile Anim 2 -\ Use Same Table
 0x34680 - Map Data
 0x346AC - Tile Changes
 0x346DC - Events
@@ -37,53 +36,77 @@ SetTilesetConfig(0x8, 0x1A1FC0) //Mountainous
 SetTilesetConfig(0x9, 0x1A0514) //Temple
 SetTilesetConfig(0xA, 0x1A1440) //Stronghold
 
-#define SetTilesetObject(entry, pointer) "PUSH; ORG Object_PTABLE + (entry*4); POIN pointer; POP"
-PUSH; ORG 0x19968; POIN Object_PTABLE; POP
-ALIGN 4; Object_PTABLE:
+#define SetTilesetObject(entry, pointer) "PUSH; ORG Object_Palette_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x19968; POIN Object_Palette_PTABLE; POP
+
+#define SetTilesetPalette(entry, pointer) "PUSH; ORG Object_Palette_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x1999C; POIN Object_Palette_PTABLE; POP
+
+ALIGN 4; Object_Palette_PTABLE:
 FILL 257*4
+
 SetTilesetObject(0x1, 0x1ADCF0) //Fields
-SetTilesetObject(0x2, 0x191B14) //Village
-SetTilesetObject(0x3, 0x18B89C) //Castle
-SetTilesetObject(0x4, 0x185154) //Plains
-SetTilesetObject(0x5, 0x1816B8) //Fort
-SetTilesetObject(0x6, 0x17A9F4) //Desert
-SetTilesetObject(0x7, 0x170DA8) //Black Temple
-SetTilesetObject(0x8, 0x169D54) //Mountainous
-SetTilesetObject(0x9, 0x1609BC) //Temple
-SetTilesetObject(0xA, 0x165F7C) //Stronghold
 
-#define SetTilesetPalette(entry, pointer) "PUSH; ORG Palette_PTABLE + (entry*4); POIN pointer; POP"
-PUSH; ORG 0x1999C; POIN Palette_PTABLE; POP
-ALIGN 4; Palette_PTABLE:
-FILL 257*4
-SetTilesetPalette(0x1, 0x1AEBF0) //Fields Pal 1
-SetTilesetPalette(0x2, 0x1AE5B0) //Fields Pal 2
-SetTilesetPalette(0x3, 0x1AE0B0) //Fields Pal 3
-SetTilesetPalette(0x4, 0x1ADCF0) //Fields Pal 4
-SetTilesetPalette(0x5, 0x1AEAB0) //Village Pal 1
-SetTilesetPalette(0x6, 0x1AD7F0) //Village Pal 2
-SetTilesetPalette(0x7, 0x1ACF30) //Village Pal 3
-SetTilesetPalette(0x8, 0x1AE970) //Castle Pal 1
-SetTilesetPalette(0x9, 0x1AE1F0) //Castle Pal 2
-SetTilesetPalette(0xA, 0x1ADE30) //Castle Pal 3
-SetTilesetPalette(0xB, 0x1AD2F0) //Castle Pal 4
-SetTilesetPalette(0xC, 0x1AE830) //Plains Pal 1
-SetTilesetPalette(0xD, 0x1AE6F0) //Plains Pal 2
-SetTilesetPalette(0xE, 0x1A3470) //Fort Pal 1
-SetTilesetPalette(0xF, 0x1ADA70) //Fort Pal 2
-SetTilesetPalette(0x10, 0x1AD1B0) //Fort Pal 3
-SetTilesetPalette(0x11, 0x1AE330) //Desert
-SetTilesetPalette(0x12, 0x1ADF70) //Lava Cave
-SetTilesetPalette(0x13, 0x1ADBB0) //Black Temple
-SetTilesetPalette(0x14, 0x1AD930) //Mountainous Pal 1
-SetTilesetPalette(0x15, 0x1AD430) //Mountainous Pal 2
-SetTilesetPalette(0x16, 0x1AD570) //Temple
-SetTilesetPalette(0x17, 0x1AD6B0) //Stronghold Pal 1
-SetTilesetPalette(0x18, 0x1AD070) //Stronghold Pal 2
+SetTilesetPalette(0x2, 0x1AEBF0) //Fields Pal 1
+SetTilesetPalette(0x3, 0x1AE5B0) //Fields Pal 2
+SetTilesetPalette(0x4, 0x1AE0B0) //Fields Pal 3
+SetTilesetPalette(0x5, 0x1ADCF0) //Fields Pal 4
 
-#define SetTileAnim1(entry, pointer) "PUSH; ORG TileAnim1_PTABLE + (entry*4); POIN pointer; POP"
-PUSH; ORG 0x30134; POIN TileAnim1_PTABLE; POP
-ALIGN 4; TileAnim1_PTABLE:
+SetTilesetObject(0x6, 0x191B14) //Village
+
+SetTilesetPalette(0x7, 0x1AEAB0) //Village Pal 1
+SetTilesetPalette(0x8, 0x1AD7F0) //Village Pal 2
+SetTilesetPalette(0x9, 0x1ACF30) //Village Pal 3
+
+SetTilesetObject(0xA, 0x18B89C) //Castle
+
+SetTilesetPalette(0xB, 0x1AE970) //Castle Pal 1
+SetTilesetPalette(0xC, 0x1AE1F0) //Castle Pal 2
+SetTilesetPalette(0xD, 0x1ADE30) //Castle Pal 3
+SetTilesetPalette(0xE, 0x1AD2F0) //Castle Pal 4
+
+SetTilesetObject(0xF, 0x185154) //Plains
+
+SetTilesetPalette(0x10, 0x1AE830) //Plains Pal 1
+SetTilesetPalette(0x11, 0x1AE6F0) //Plains Pal 2
+
+SetTilesetObject(0x12, 0x1816B8) //Fort
+
+SetTilesetPalette(0x13, 0x1A3470) //Fort Pal 1
+SetTilesetPalette(0x14, 0x1ADA70) //Fort Pal 2
+SetTilesetPalette(0x15, 0x1AD1B0) //Fort Pal 3
+
+SetTilesetObject(0x16, 0x17A9F4) //Desert
+
+SetTilesetPalette(0x17, 0x1AE330) //Desert
+
+SetTilesetObject(0x18, 0x1756B4) //Lava Cave
+
+SetTilesetPalette(0x19, 0x1ADF70) //Lava Cave
+
+SetTilesetObject(0x1A, 0x170DA8) //Black Temple
+
+SetTilesetPalette(0x1B, 0x1ADBB0) //Black Temple
+
+SetTilesetObject(0x1C, 0x169D54) //Mountainous
+
+SetTilesetPalette(0x1D, 0x1AD930) //Mountainous Pal 1
+SetTilesetPalette(0x1E, 0x1AD430) //Mountainous Pal 2
+
+SetTilesetObject(0x1F, 0x1609BC) //Temple
+
+SetTilesetPalette(0x20, 0x1AD570) //Temple
+
+SetTilesetObject(0x21, 0x165F7C) //Stronghold
+
+SetTilesetPalette(0x22, 0x1AD6B0) //Stronghold Pal 1
+SetTilesetPalette(0x23, 0x1AD070) //Stronghold Pal 2
+
+#define SetTileAnim1(entry, pointer) "PUSH; ORG TileAnim_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x30134; POIN TileAnim_PTABLE; POP
+#define SetTileAnim2(entry, pointer) "PUSH; ORG TileAnim_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x30C78; POIN TileAnim_PTABLE; POP
+ALIGN 4; TileAnim_PTABLE:
 FILL 257*4
 SetTileAnim1(0x1, 0x59D498) //Plains Water TileAnim1
 SetTileAnim1(0x2, 0x59D568) //Village Water TileAnim1
@@ -91,11 +114,7 @@ SetTileAnim1(0x3, 0x59D6F8) //Castle Water TileAnim1
 SetTileAnim1(0x4, 0x59D678) //Stronghold Torch TileAnim1
 SetTileAnim1(0x5, 0x59D520) //Boat Map Water TileAnim1
 
-#define SetTileAnim2(entry, pointer) "PUSH; ORG TileAnim2_PTABLE + (entry*4); POIN pointer; POP"
-PUSH; ORG 0x30C78; POIN TileAnim2_PTABLE; POP
-ALIGN 4; TileAnim2_PTABLE:
-FILL 257*4
-SetTileAnim2(0x1, 0x59D800) //Lava Cave TileAnim2
+SetTileAnim2(0x6, 0x59D800) //Lava Cave TileAnim2
 
 #define SetMapData(entry, pointer) "PUSH; ORG MapData_PTABLE + (entry*4); POIN pointer; POP"
 PUSH; ORG 0x34680; POIN MapData_PTABLE; POP

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
  <tileset firstgid="1" source="FE6_Snow.tsx"/>
- <layer id="1" name="Tile Layer 1" width="15" height="10">
+ <layer id="1" name="Tile Layer 1" width="15" height="10" visible="0">
   <properties>
    <property name="Anims1" value="1"/>
    <property name="Anims2" value="0"/>
@@ -26,7 +26,7 @@
 67,67,67,67,67,67,67,67,67,67,67,67,67,67,67
 </data>
  </layer>
- <layer id="2" name="VillageClose1" width="15" height="10">
+ <layer id="2" name="VillageClose1" width="15" height="10" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="0"/>
@@ -47,7 +47,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="3" name="Chest1" width="15" height="10">
+ <layer id="3" name="Chest1" width="15" height="10" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="1"/>
@@ -62,10 +62,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,67,67,67,
-0,0,0,0,0,0,0,0,0,0,0,67,67,67,67,
-0,0,0,0,0,0,0,0,0,0,67,67,67,67,67,
-0,0,0,0,0,0,0,0,0,67,67,67,67,67,67
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
 </map>

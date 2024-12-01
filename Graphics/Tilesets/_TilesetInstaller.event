@@ -14,8 +14,8 @@ ALIGN 4
 SnowTilesetCONFIG:
 #incbin "dmp/Snow-mapchip.dmp"
 
-SetTilesetObject(0xB, SnowTilesetOBJ)
-SetTilesetPalette(0x19, SnowTilesetPAL)
+SetTilesetObject(0x24, SnowTilesetOBJ)
+SetTilesetPalette(0x25, SnowTilesetPAL)
 SetTilesetConfig(0xB, SnowTilesetCONFIG)
 
-SetTilesetPalette(0x1A, FieldsTilesetRedFogPAL)
+SetTilesetPalette(0x26, FieldsTilesetRedFogPAL)
