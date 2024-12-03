@@ -250,3 +250,6 @@ POP
 
   //FogModeLevel - ditto
   #include "ExternalHacks/FogModeLevel/FogModeLevel.lyn.event"
+
+  //Split PTABLE - ditto, fix by AuraWolf
+  #include "Necessary/Split_PTABLE/Split_PTABLE.event"
