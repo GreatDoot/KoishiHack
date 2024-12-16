@@ -1,0 +1,11 @@
+ALIGN 4
+PurpleCastleOBJ:
+#incbin "dmp/Fe8_Castle_Improved-graphics.dmp"
+
+ALIGN 4
+PurpleCastlePAL:
+#incbin "palettes/output/Fe8_Castle_Improved-palette.dmp"
+
+ALIGN 4
+PurpleCastleCONFIG:
+#incbin "dmp/Fe8_Castle_Improved-mapchip.dmp"

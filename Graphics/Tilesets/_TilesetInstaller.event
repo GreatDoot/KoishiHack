@@ -1,39 +1,13 @@
-ALIGN 4
-FieldsTilesetRedFogPAL:
-#incbin "palettes/output/FieldsPal1.dmp"
-
-ALIGN 4
-SnowTilesetOBJ:
-#incbin "dmp/Snow-graphics.dmp"
-
-ALIGN 4
-PurpleCastleOBJ:
-#incbin "dmp/Fe8_Castle_Improved-graphics.dmp"
-
-ALIGN 4
-SnowTilesetPAL:
-#incbin "palettes/output/Snow-palette.dmp"
-
-ALIGN 4
-PurpleCastlePAL:
-#incbin "palettes/output/Fe8_Castle_Improved-palette.dmp"
-
-ALIGN 4
-SnowTilesetCONFIG:
-#incbin "dmp/Snow-mapchip.dmp"
-
-ALIGN 4
-PurpleCastleCONFIG:
-#incbin "dmp/Fe8_Castle_Improved-mapchip.dmp"
-
+#include "Snow.event"
 SetTilesetObject(0xB, SnowTilesetOBJ)
 SetTilesetPalette(0x19, SnowTilesetPAL)
 SetTilesetConfig(0xB, SnowTilesetCONFIG)
 
+ALIGN 4; FieldsTilesetRedFogPAL:
+#incbin "palettes/output/FieldsPal1.dmp"
+SetTilesetPalette(0x1A, FieldsTilesetRedFogPAL)
+
+#include "PurpleCastle.event"
 SetTilesetObject(0xC, PurpleCastleOBJ)
 SetTilesetPalette(0x1B, PurpleCastlePAL)
 SetTilesetConfig(0xC, PurpleCastleCONFIG)
-
-SetTilesetPalette(0x1A, FieldsTilesetRedFogPAL)
-
-//Fe8_Castle_Improved
