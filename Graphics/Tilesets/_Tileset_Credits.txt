@@ -1,2 +1,4 @@
 TilesetFogFilter.py from FogDR by Huichelaar
 Snow Tileset from FE6
+Fe8 Improved Castle by N426
+Fe8 Lava Caves Remaster by HyperGammaSpaces
