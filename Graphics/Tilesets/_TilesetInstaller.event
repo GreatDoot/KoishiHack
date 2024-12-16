@@ -24,7 +24,7 @@ SnowTilesetCONFIG:
 
 ALIGN 4
 PurpleCastleCONFIG:
-#incbin "dmp/Fe8_Castle_Improved-graphics.dmp"
+#incbin "dmp/Fe8_Castle_Improved-mapchip.dmp"
 
 SetTilesetObject(0xB, SnowTilesetOBJ)
 SetTilesetPalette(0x19, SnowTilesetPAL)
