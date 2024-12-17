@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="10" height="17" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="10" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
  <tileset firstgid="1" source="Fe8_Castle_Improved.tsx"/>
- <layer id="1" name="Tile Layer 1" width="10" height="17" locked="1">
+ <tileset firstgid="1025" source="FE6_Snow.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="18" locked="1">
   <data encoding="csv">
 952,953,919,862,863,864,919,951,952,952,
 984,985,951,894,895,896,951,983,984,984,
 927,1017,1015,289,290,291,1015,1015,927,927,
-620,721,722,722,722,722,722,722,621,626,
-563,721,722,722,722,722,722,722,563,562,
-652,562,562,562,562,562,562,562,653,626,
-626,626,626,626,626,626,626,626,626,626,
+657,722,722,722,722,722,722,722,658,626,
+597,722,722,722,722,722,722,722,629,562,
+689,628,628,722,722,722,628,628,690,626,
+626,626,689,628,628,628,690,626,626,626,
 626,626,626,626,626,94,95,96,1007,657,
 94,95,96,1007,626,94,95,96,1007,597,
 94,95,96,1007,626,122,123,124,1007,689,
@@ -19,13 +20,15 @@
 626,626,597,594,562,595,629,626,94,95,
 626,626,689,628,628,628,690,626,122,123,
 96,1007,626,626,626,626,626,626,976,976,
-128,1007,626,626,626,626,626,626,626,626
+128,1007,626,626,626,626,626,657,596,596,
+124,1007,626,626,626,626,626,597,594,562
 </data>
  </layer>
- <layer id="2" name="Cutscene Stair Open" width="10" height="17">
+ <layer id="2" name="Cutscene Stair Open" width="10" height="18" locked="1">
   <data encoding="csv">
 0,0,0,453,455,454,0,0,0,0,
 0,0,0,453,455,454,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,

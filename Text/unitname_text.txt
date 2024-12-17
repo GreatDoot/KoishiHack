@@ -27,3 +27,6 @@ Funeral[X]
 
 # 0x21B YujinName
 Yujin[X]
+
+# 024d SoldierName
+Unknown[X]
