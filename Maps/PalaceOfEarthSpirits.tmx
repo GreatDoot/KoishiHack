@@ -25,6 +25,17 @@
 </data>
  </layer>
  <layer id="2" name="Cutscene Stair Open" width="10" height="18" locked="1">
+ <properties>
+   <property name="Anims1" value="1"/>
+   <property name="Anims2" value="0"/>
+   <property name="ChapterID" value="0"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="1"/>
+   <property name="MapID" value="1"/>
+   <property name="ObjectType" value="0xB"/>
+   <property name="PaletteID" value="0x19"/>
+   <property name="TileConfig" value="0xB"/>
+  </properties>
   <data encoding="csv">
 0,0,0,453,455,454,0,0,0,0,
 0,0,0,453,455,454,0,0,0,0,
