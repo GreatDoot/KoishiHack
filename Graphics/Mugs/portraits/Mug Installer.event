@@ -12,3 +12,10 @@ SatoriMug:
 #incbin "Satori_palette.dmp"
 #incbin "Satori_minimug.dmp"
 
+ALIGN 4
+YujinMug:
+#incbin "Yujin_mug.dmp"
+#incbin "Yujin_frames.dmp"
+#incbin "Yujin_palette.dmp"
+#incbin "Yujin_minimug.dmp"
+

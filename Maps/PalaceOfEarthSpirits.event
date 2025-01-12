@@ -26,7 +26,7 @@ ALIGN 4
 MapData:
   #incbin "PalaceOfEarthSpirits_data.dmp"
 
-SetChapterData(0, 0xB, 0, 0x19, 0xB, 1, MapData, 1, 0, 1)
+SetChapterData(0, 0xC, 0, 0x1B, 0xC, 1, MapData, 1, 0, 1)
 
 ALIGN 4
 Tile_Layer_1:
