@@ -26,15 +26,15 @@ ALIGN 4
 MapData:
   #incbin "PalaceOfEarthSpirits_data.dmp"
 
-SetChapterData(0, 0xC, 0, 0x1B, 0xC, 1, MapData, 1, 0, 1)
+SetChapterData(0, 0xC, 0, 0x1B, 0xC, 1, MapData, 3, 0, 1)
 
 ALIGN 4
-Tile_Layer_1:
-  SHORT $EDC $EE0 $E58 $D74 $D78 $D7C $E58 $ED8 $EDC $EDC $F5C $F60 $ED8 $DF4 $DF8 $DFC $ED8 $F58 $F5C $F5C $E78 $FE0 $FD8 $480 $484 $488 $FD8 $FD8 $E78 $E78 $A40 $B44 $B44 $B44 $B44 $B44 $B44 $B44 $A44 $9C4 $950 $B44 $B44 $B44 $B44 $B44 $B44 $B44 $9D0 $8C4 $AC0 $9CC $9CC $B44 $B44 $B44 $9CC $9CC $AC4 $9C4 $9C4 $9C4 $AC0 $9CC $9CC $9CC $AC4 $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $174 $178 $17C $FB8 $A40 $174 $178 $17C $FB8 $9C4 $174 $178 $17C $FB8 $950 $174 $178 $17C $FB8 $9C4 $1E4 $1E8 $1EC $FB8 $AC0 $1E4 $1E8 $1EC $FB8 $9C4 $F3C $F3C $F3C $9C4 $9C4 $F3C $F3C $F3C $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $A40 $94C $94C $94C $A44 $9C4 $174 $178 $9C4 $9C4 $950 $944 $8C4 $948 $9D0 $9C4 $174 $178 $9C4 $9C4 $AC0 $9CC $9CC $9CC $AC4 $9C4 $1E4 $1E8 $17C $FB8 $9C4 $9C4 $9C4 $9C4 $9C4 $9C4 $F3C $F3C $1FC $FB8 $9C4 $9C4 $9C4 $9C4 $9C4 $A40 $94C $94C $1EC $FB8 $9C4 $9C4 $9C4 $9C4 $9C4 $950 $944 $8C4
+Cutscene_Stair_Open:
+  SHORT $710 $718 $714 $710 $718 $714
 
 ALIGN 4
 MapChangesData:
-  TileMap(0, 0, 0, 10, 18, Tile_Layer_1)
+  TileMap(0, 3, 0, 3, 2, Cutscene_Stair_Open)
   TileMapEnd
 
 SetTileChanges(1, MapChangesData)
