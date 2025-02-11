@@ -242,14 +242,17 @@ POP
   //BladeWolfFunny - ditto
   #include "ExternalHacks/BladeWolfFunny/BladeWolfFunny.event"
 
-  //LordSplitMenu - StanH
-  #include "ExternalHacks/LordSplitMenu/Installer.event"
-
   //NumberEntry - Vesly
-  #include "ExternalHacks/ASM-NumberEntry/Installer.event"
-
-  //FogModeLevel - ditto
-  #include "ExternalHacks/FogModeLevel/FogModeLevel.lyn.event"
+  #include "ExternalHacks/NumberEntry/Installer.event"
 
   //Split PTABLE - ditto, fix by AuraWolf
   #include "Necessary/Split_PTABLE/Split_PTABLE.event"
+  
+  //LordSplitMenu - StanH
+  #include "ExternalHacks/LordSplitMenu/LordSplitMenu.event"
+  
+  //JumpToEvent - ditto
+  #include "ExternalHacks/JumpToEvent/JumpToEvent.event"
+  
+  //Arbitrary Read/Write - ditto
+  #include "ExternalHacks/ArbitraryReadWrite/Installer.event"

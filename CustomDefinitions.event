@@ -16,6 +16,12 @@
   #define DebuffTableSize 0x00000440
 #endif
 
+#ifndef RunModifiersRam
+	#define RunModifiersRam 0x030005B0
+	#define ReturnEventAddressRam 0x030005B4
+	#define RunModifiersRamSize 0x3
+#endif
+
 #ifndef ChapterDataTable
   #define ChapterDataTable 0x8B0890
   #define ChapterDataTableEntSize 148

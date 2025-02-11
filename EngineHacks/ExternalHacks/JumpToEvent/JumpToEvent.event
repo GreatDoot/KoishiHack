@@ -1,0 +1,4 @@
+ALIGN 4
+PUSH; ORG (currentOffset)+1; JumpToEvent: POP
+// Deletes Event Engines and creates a new one, event pointer given in slot 1
+#incbin "JumpToEvent.bin"

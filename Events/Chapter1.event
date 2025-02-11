@@ -58,9 +58,14 @@ UNIT
 
 ALIGN 4
 BeginningScene:
+CHECK_EVENTID 0x12C
+BEQ 0 sC s0
+	ArbWrite(ReturnEventAddressRam, (BeginningScene|0x8000000), sizeWord) //I *could* make this a better way. I won't, though.
+	CALL RunModifiersEvent
+LABEL 0
+ENUF 0x12C
 LOAD1 0x0 Units
 LOAD1 0x1 EnemyUnits
-//CALL RunModifiersEvent
 NoFade
 ENDA
 

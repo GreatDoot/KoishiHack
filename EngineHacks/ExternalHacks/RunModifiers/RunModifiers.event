@@ -1,0 +1,250 @@
+ALIGN 4
+// putting this in ExternalHacks instead of in Events because this is a work of art and deserves better
+
+// Definitions
+#ifndef ClearBGMacro
+    #define ClearBGMacro "FADI 16; CALL 0x89EE2C4; FADU 16;"
+#endif
+
+#ifndef TutorialTextBox(textID)
+    #define TutorialTextBox(textID) "SVAL sB 0xFFFFFFFF; TUTORIALTEXTBOXSTART; TEXTSHOW textID; TEXTEND; REMA"
+#endif
+
+
+// Event Main
+RunModifiersEvent:
+	SetBackground(0x35)
+	EVBIT_MODIFY 0x1
+	TutorialTextBox(AskToModifyRunText)
+	SVAL s1 0x1
+	BNE 0 sC s1
+		CALL RunModifiersInternal
+	LABEL 0
+	ClearBGMacro
+	EVBIT_MODIFY 0x0
+	EVBIT_T 7
+	ENDA
+	
+RunModifiersInternalDefs:
+	BYTE 6 8 18 0
+	WORD 1
+	POIN RunModifiersInternalCommands
+	WORD 0 0 0 0 0 0
+	RunModifiersInternalCommands:
+		EventMenuCommand(FogModeMenuText)
+		EventMenuCommand(HitCritMenuText)
+		EventMenuCommand(GrowthsMenuText)
+		EventMenuCommand(ReverseModeMenuText)
+		EventMenuCommand(FinishMenuText)
+	EventMenuCommandEnd
+	
+RunModifiersInternal:
+	LABEL 0
+	SVAL s1 (RunModifiersInternalDefs|0x8000000)
+	ASMC CallEventMenu
+	BEQ 1 sC s0
+	SVAL s1 0x1
+	BEQ 2 sC s1
+	SVAL s1 0x2
+	BEQ 3 sC s1
+	SVAL s1 0x3
+	BEQ 4 sC s1
+	
+	LABEL 5
+	TutorialTextBox(ConfirmFinishText)
+	SVAL s1 0x1
+	BEQ 7 sC s1
+	GOTO 0
+	
+	LABEL 1
+	SVAL s1 (RunModifiersFogModeEvent|0x8000000)
+	GOTO 6
+	LABEL 2
+	SVAL s1 (RunModifiersHitCritEvent|0x8000000)
+	GOTO 6
+	LABEL 3
+	SVAL s1 (RunModifiersGrowthsEvent|0x8000000)
+	GOTO 6
+	LABEL 4
+	SVAL s1 (RunModifiersReverseModeEvent|0x8000000)
+	LABEL 6
+	ASMC JumpToEvent
+	
+	LABEL 7
+	ClearBGMacro
+	EVBIT_T 7
+	EVBIT_MODIFY 0
+	ENUT 0x12C
+	ArbRead(ReturnEventAddressRam, sizeWord)
+	SADD s1 sC s0
+	ASMC JumpToEvent
+	ENDA
+
+RunModifiersToggleDefs:
+	BYTE 6 8 18 0
+	WORD 1
+	POIN RunModifiersToggleCommands
+	WORD 0 0 0 0 0 0
+	RunModifiersToggleCommands:
+		EventMenuCommand(ToggleOnText)
+		EventMenuCommand(ToggleOffText)
+	EventMenuCommandEnd
+
+RunModifiersFogModeDefs:
+	BYTE 6 8 18 0
+	WORD 1
+	POIN RunModifiersFogModeCommands 
+	WORD 0 0 0 0 0 0  
+	RunModifiersFogModeCommands:
+		EventMenuCommand(FogModeToggleMenuText)
+		EventMenuCommand(FogModeSetLevelMenuText)
+		EventMenuCommand(ExplainMenuText)
+		EventMenuCommand(BackMenuText)
+	EventMenuCommandEnd
+
+RunModifiersFogModeEvent:
+	LABEL 0
+	SVAL s1 (RunModifiersFogModeDefs|0x8000000)
+	ASMC CallEventMenu
+	BEQ 1 sC s0
+	SVAL s1 0x1
+	BEQ 2 sC s1
+	SVAL s1 0x2
+	BEQ 3 sC s1
+	GOTO 4
+	
+	LABEL 1
+	SVAL s1 (RunModifiersToggleDefs|0x8000000)
+	ASMC CallEventMenu
+	ArbRead(RunModifiersRam, sizeByte)
+	BNE 10 sC s0
+		SVAL s2 00100000b
+		SORR s2 sC s2
+		GOTO 11
+	LABEL 10
+		SVAL s2 11011111b
+		SAND s2 sC s2
+	LABEL 11
+	SVAL s3 sizeByte
+	ASMC ArbitraryWrite
+	GOTO 0
+	
+	LABEL 2
+	ASMC RunModifiersReadValue
+	SADD s1 sC s0
+	SVAL s2 0
+	SVAL s3 5
+	SVAL s4 FogModeSettingMainText
+	SVAL s5 FogModeSettingSubText
+	SVAL s6 0
+	ASMC StartNumberEntry
+	SADD s1 sC s0
+	ASMC RunModifiersWriteValue
+	GOTO 0
+	
+	LABEL 3
+	TutorialTextBox(FogModeExplainText)
+	GOTO 0
+	
+	LABEL 4
+	SVAL s1 (RunModifiersInternal|0x8000000)
+	ASMC JumpToEvent
+	ENDA
+
+RunModifiersHitCritDefs:
+	BYTE 6 8 18 0
+	WORD 1
+	POIN RunModifiersHitCritCommands 
+	WORD 0 0 0 0 0 0   
+	RunModifiersHitCritCommands:
+		EventMenuCommand(SetHitToggleMenuText)
+		EventMenuCommand(SetHitValueMenuText)
+		EventMenuCommand(SetCritToggleMenuText)
+		EventMenuCommand(SetCritValueMenuText)
+		EventMenuCommand(ExplainMenuText)
+		EventMenuCommand(BackMenuText)
+	EventMenuCommandEnd
+
+RunModifiersHitCritEvent:
+	LABEL 0
+	SVAL s1 (RunModifiersHitCritDefs|0x8000000)
+	ASMC CallEventMenu
+	BEQ 1 sC s0
+	SVAL s1 0x1
+	BEQ 2 sC s1
+	SVAL s1 0x2
+	BEQ 3 sC s1
+	SVAL s1 0x3
+	BEQ 4 sC s1
+	SVAL s1 0x4
+	BEQ 5 sC s1
+	GOTO 6
+	
+	LABEL 1
+	SVAL s1 (RunModifiersToggleDefs|0x8000000)
+	ASMC CallEventMenu
+	ArbRead(RunModifiersRam, sizeByte)
+	BNE 10 sC s0
+		SVAL s2 10000000b
+		SORR s2 sC s2
+		GOTO 11
+	LABEL 10
+		SVAL s2 01111111b
+		SAND s2 sC s2
+	LABEL 11
+	SVAL s3 sizeByte
+	ASMC ArbitraryWrite
+	GOTO 0
+	
+	LABEL 2
+	ASMC RunModifiersReadValue
+	SADD s1 sC s0
+	SVAL s2 0
+	SVAL s3 5
+	SVAL s4 SetHitSettingMainText
+	SVAL s5 SetHitSettingSubText
+	SVAL s6 0
+	ASMC StartNumberEntry
+	SADD s1 sC s0
+	ASMC RunModifiersWriteValue
+	GOTO 0
+	
+	LABEL 3
+	
+	LABEL 4
+	
+	LABEL 5
+	TutorialTextBox(FogModeExplainText)
+	GOTO 0
+	
+	LABEL 6
+	SVAL s1 (RunModifiersInternal|0x8000000)
+	ASMC JumpToEvent
+	ENDA
+	
+RunModifiersGrowthsDefs:
+	BYTE 6 8 18 0 
+	WORD 1             
+	POIN RunModifiersGrowthsCommands 
+	WORD 0 0 0 0 0 0       
+	RunModifiersGrowthsCommands:
+		EventMenuCommand(100PercentToggleMenuText)
+		EventMenuCommand(0PercentToggleMenuText)
+		EventMenuCommand(MaxPercentToggleMenuText)
+		EventMenuCommand(MinPercentToggleMenuText)
+		EventMenuCommand(ExplainMenuText)
+		EventMenuCommand(BackMenuText)
+	EventMenuCommandEnd
+	
+RunModifiersReverseModeDefs:
+	BYTE 6 8 18 0
+	WORD 1
+	POIN RunModifiersReverseModeCommands 
+	WORD 0 0 0 0 0 0        
+	RunModifiersReverseModeCommands:
+		EventMenuCommand(ReverseToggleMenuText)
+		EventMenuCommand(PlayerReverseToggleMenuText)
+		EventMenuCommand(FairReverseToggleMenuText)
+		EventMenuCommand(ExplainMenuText)
+		EventMenuCommand(BackMenuText)
+	EventMenuCommandEnd

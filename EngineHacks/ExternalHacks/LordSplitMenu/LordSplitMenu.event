@@ -1,0 +1,15 @@
+	
+	#define EventMenuCommand(aTextId) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448|1); WORD 0; POIN (EventMenuCommandEffect|1); WORD 0 0 0"
+    #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
+		
+    PUSH; ORG currentOffset+1; EventMenuCommandEffect: POP
+	    #incbin "EventMenuCommandEffect.bin"
+	
+	/* 
+		Menu Def pointer in Slot 1
+		SVAL s1 (MenuDef|0x8000000)
+		ASMC CallEventMenu
+	*/
+	
+	PUSH; ORG currentOffset+1; CallEventMenu: POP
+		#incbin "CallEventMenu.bin"

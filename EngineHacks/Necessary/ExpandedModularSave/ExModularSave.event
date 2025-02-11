@@ -101,6 +101,10 @@ gSaveBlockTypeSizeLookup:
 
 DebuffTablePointer: // required for debuffs module
 	WORD DebuffTableRam
+	
+#include "SrcModules/RunModifiers.lyn.event"
+RunModifiersRam_Link:
+WORD RunModifiersRam
 
 // ===============
 // = SAVE CHUNKS =
@@ -146,6 +150,10 @@ gGameSaveChunks:
 	DeclSaveChunk($1128, $00C8, MSa_WriteSupplyItems, MSa_ReadSupplyItems, EMS_CHUNK_CONVOYITEMS)
 	
 	// $11F0
+	// 3 bytes used for RunModifiers
+	DeclSaveChunk($11F0, RunModifiersRamSize, EMS_WriteRunModifiers, EMS_ReadRunModifiers)
+	
+	// $11F3
 	
 	// free up to $1344
 
@@ -197,13 +205,17 @@ gSuspendSaveChunks:
 	// Save Debuffs (TODO: maybe reduce size)
 	DeclSaveChunk($23ED, DebuffTableSize, SUD_SaveDebuffs,  SUD_LoadDebuffs)
 
-	// Permanent eids (moved here because of a mistake in the previous allocation)
+	// Permanent eids (moved here because of a mistake in the previous allocation)20
+	36
 	DeclSaveChunk($282D, $0019, $0A3150+1, $0A3198+1)
 
 	// $25AA
 	DeclSaveChunk($2846, $00C8, MSa_WriteSupplyItems, MSa_ReadSupplyItems)  // Convoy Items
 	
-	// ends at $290E
+	// $290E
+	DeclSaveChunk($290E, RunModifiersRamSize, EMS_WriteRunModifiers, EMS_ReadRunModifiers) // RunModifiers
+	
+	
 	// free up to $2E78 ($56A free bytes)
 
 	DeclSaveChunk(0, 0, 0, MSu_LoadClaimFlagsFromParentSave) // Load Bonus Claim flags from parent save

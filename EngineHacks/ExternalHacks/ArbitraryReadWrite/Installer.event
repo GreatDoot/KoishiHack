@@ -1,0 +1,18 @@
+// Arbitrary Read/Write to RAM from event - ditto
+ALIGN 4
+
+PUSH; ORG (currentOffset)+1; ArbitraryRead: POP
+#incbin "ArbitraryRead.bin"
+
+PUSH ; ORG (currentOffset)+1; ArbitraryWrite: POP
+#incbin "ArbitraryWrite.bin"
+
+// "Clobbers" s1,2,3 - stores values of size based on param 3 (size)
+#define ArbWrite(ram,value,size) "SVAL s1 (ram); SVAL s2 (value); SVAL s3 (size); ASMC ArbitraryWrite"
+
+// "Clobbers" s1,2 - reads values of size based on param 2 (size); returns read value in sC
+#define ArbRead(ram,size) "SVAL s1 (ram); SVAL s2 (size); ASMC ArbitraryRead"
+
+#define sizeByte 0x0
+#define sizeShort 0x1
+#define sizeWord 0x2
